@@ -6,8 +6,8 @@
 
 }
 
-.rainy {
-
+.rainy {            
+                                 /* this may need to be done fully in js instead */
 }
 
 .cloudy {
@@ -15,9 +15,7 @@
 }
 
 .lightening {
-    
+
 }
-
-
 
 /* === Weather Status Icon Group End ========================================================= */
