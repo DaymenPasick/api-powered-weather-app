@@ -29,7 +29,7 @@
     
             <!-- needs div for container -->
         <header id="header" class="d-flex navbar bg-body-tertiary container-fluid
-            justify-content-end bg-primary border-bottom border-5 border-info">
+            justify-content-end bg-primary border-bottom border-5 border-warning">
         
             <h1 class="text-light me-5 py-2">Weather Dashboard</h1>
             
@@ -69,66 +69,76 @@
 
 
 
-                <main class="d-flex flex-column col-md-8 col-lg-8">
+                <main class="d-flex flex-column col-md-8 col-lg-8 justify-content-evenly">
 
                 <!-- Section for today's forcasted weather -->
-                    <section id="today-forecast" class="">
-                    <div class="border border-5 border-warning text-center">
-                        <h2 id="today-header"> Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                            Cupiditate natus ad cumque id, ipsum tempore sequi, blanditiis incidunt 
-                            iusto delectus magnam pariatur, veniam culpa. Sit, soluta! 
-                            Dolorem dolore pariatur earum.</h2>
-                        <p class="icon-toggle"></p>
+                    <section id="today-forecast" class="d-flex">
+                        <div class="border border-5 border-primary text-center bg-light mx-2">
+                            <h2 id="today-header" class="fw-bold p-3"> Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                                Cupiditate natus ad cumque id, ipsum tempore sequi, blanditiis incidunt 
+                                iusto delectus magnam pariatur, veniam culpa. Sit, soluta! 
+                                Dolorem dolore pariatur earum.</h2>
+                            <p class="icon-toggle"></p>
 
-                        <p id="today-temp"></p>
-                        <p id="today-wind"></p>
-                        <p id="today-humid"></p>
-                    </div>  
+                            <p id="today-temp"></p>
+                            <p id="today-wind"></p>
+                            <p id="today-humid"></p>
+                        </div>  
                     </section>
 
 
 
                 <!-- Section for 5-day forcast -->
-                    <section id="5day-forecast" class="five-day-container">
+                    <section id="5day-forecast" class="five-day-container d-flex mx-2">
                         <!-- These will store data for each future day in the 5-day forecast -->
-                            <div id="day-1" class=" future-forecast border border-5 border-warning">
-                                <p class="icon-toggle">☀️</p>
+                            <div id="day-1" class="future-forecast border border-5 border-primary bg-light">
+                                <p class="icon-toggle text-center">☀️</p>
 
-                                <p id="day1-temp">asdsas</p>
-                                <p id="day1-wind">asdas</p>
-                                <p id="day1-humid">ada</p>
+                                <div class="fw-bold p-3">
+                                    <p id="day1-temp">asdsas</p>
+                                    <p id="day1-wind">asdas</p>
+                                    <p id="day1-humid">ada</p>
+                                </div>
                             </div>
 
-                            <div id="day-2" class="future-forecast border border-5 border-warning">
-                                <p class="icon-toggle">☀️</p>
+                            <div id="day-2" class=" future-forecast border border-5 border-primary bg-light">
+                                <p class="icon-toggle text-center">☀️</p>
 
-                                <p id="day2-temp">asdas</p>
-                                <p id="day2-wind">adas</p>
-                                <p id="day2-humid">asdsa</p>
+                                <div class="fw-bold p-3">
+                                    <p id="day2-temp">asdas</p>
+                                    <p id="day2-wind">adas</p>
+                                    <p id="day2-humid">asdsa</p>
+                                </div>
                             </div>
 
-                            <div id="day-3" class="future-forecast border border-5 border-warning">
-                                <p class="icon-toggle">⛅</p>
+                            <div id="day-3" class=" future-forecast border border-5 border-primary bg-light ">
+                                <p class="icon-toggle text-center">⛅</p>
 
-                                <p id="day3-temp">asdsa</p>
-                                <p id="day3-wind">asdsa</p>
-                                <p id="day3-humid">asdsa</p>
+                                <div class="fw-bold p-3">
+                                    <p id="day2-temp">asdas</p>
+                                    <p id="day2-wind">adas</p>
+                                    <p id="day2-humid">asdsa</p>
+                                </div>
                             </div>
                                 
-                            <div id="day-4" class="future-forecast border border-5 border-warning">
-                                <p class="icon-toggle">🌧️</p>
+                            <div id="day-4" class=" future-forecast border border-5 border-primary bg-light ">
+                                <p class="icon-toggle text-center">🌧️</p>
 
-                                <p id="day4-temp">asdsa</p>
-                                <p id="day4-wind">asdsa</p>
-                                <p id="day4-humid">asdsa</p>
+                                <div class="fw-bold p-3">
+                                    <p id="day2-temp">asdas</p>
+                                    <p id="day2-wind">adas</p>
+                                    <p id="day2-humid">asdsa</p>
+                                </div>
                             </div>
 
-                            <div id="day-5" class="future-forecast border border-5 border-warning">
-                                <p class="icon-toggle">⛈️</p>
+                            <div id="day-5" class=" future-forecast border border-5 border-primary bg-light ">
+                                <p class="icon-toggle text-center">⛈️</p>
 
-                                <p id="day5-temp">asdsa</p>
-                                <p id="day5-wind">asdsa</p>
-                                <p id="day5-humid">asdsa</p>
+                                <div class="fw-bold p-3">
+                                    <p id="day2-temp">asdas</p>
+                                    <p id="day2-wind">adas</p>
+                                    <p id="day2-humid">asdsa</p>
+                                </div>
                             </div>
 
                     </section>
