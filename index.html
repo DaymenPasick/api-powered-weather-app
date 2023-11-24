@@ -29,103 +29,108 @@
     
             <!-- needs div for container -->
         <header id="header" class="d-flex navbar bg-body-tertiary container-fluid
-            justify-content-end bg-primary border-bottom border-5 border-warning">
+            justify-content-end bg-primary border-bottom border-5 border-info">
         
             <h1 class="text-light me-5 py-2">Weather Dashboard</h1>
             
         </header>
 
 
-        <div class="">
-            <div class="d-flex flex-row">
+        <div class="d-flex">
+            <div class="container-fluid">
         <!-- Section for search bar and search history buttons -->
-            <nav class="d-flex flex-column justify-content-start col-12 cold md-4 col-lg-3">
+                <nav class="">
 
-                <div class="d-flex justify-content-star">
-                    <h2 class="text-light ms-2">Search For City</h2>
-                </div>
+                    <div class="">
+                        <h2 class="text-light ms-2">Search For City</h2>
+                    </div>
 
-                <div class="d-flex">
-                    <form id="search-bar" class="">
-                        <label for="City"></label>
-                        <!-- <i class="fa fa-search text-light fs-4 ms-2 "></i> -->
-                        <button class="btn-warning ms-2 ">&#x1F50E</button>
-                        <input type="text" id="search-input" class="border-info ms-2">
-                    </form>
-                </div>    
+                    <div class="d-flex justify-content-center">
+                        <form id="search-bar" class="">
+                            <label for="City"></label>
+                            <!-- <i class="fa fa-search text-light fs-4 ms-2 "></i> -->
+                            <button class="btn-primary">&#x1F50E</button>
+                            <input type="text" id="search-input" class="border-warning ms-2">
+                        </form>
+                    </div>    
 
-                <div id="search-history" class="d-flex flex-column ">
-                    <button class="my-5 btn-dark border-opacity-50 border-5 border-info btn-lg">placeholder5</button>
-                    <button class="my-5 btn-dark border-opacity-50 border-5 border-info btn-lg">placeholder4</button>
-                    <button class="my-5 btn-dark border-opacity-50 border-5 border-info btn-lg">placeholder3</button>
-                    <button class="my-5 btn-dark border-opacity-50 border-5 border-info btn-lg">placeholder2</button>
-                    <button class="my-5 btn-dark border-opacity-50 border-5 border-info btn-lg">placeholder1</button>
-                </div>
-                <!-- will append button elements as children here -->
-                <!-- button elements will populate based off city search history -->
+                    <div id="search-history" class="">
+                        <button class=" btn-dark border-opacity-50 border-5 border-primary btn-lg">placeholder5</button>
+                        <button class=" btn-dark border-opacity-50 border-5 border-primary btn-lg">placeholder4</button>
+                        <button class=" btn-dark border-opacity-50 border-5 border-primary btn-lg">placeholder3</button>
+                        <button class=" btn-dark border-opacity-50 border-5 border-primary btn-lg">placeholder2</button>
+                        <button class=" btn-dark border-opacity-50 border-5 border-primary btn-lg">placeholder1</button>
+                    </div>
+                    <!-- will append button elements as children here -->
+                    <!-- button elements will populate based off city search history -->
 
-            </nav>
-
-
-
-            <main class="d-flex flex-column col-12 cold md-6 col-lg-9">
-
-            <!-- Section for today's forcasted weather -->
-                <section id="today-forecast" class="d-flex border border-5 text-center">
-                    <h2 id="today-header"> Today's</h2>
-                    <p class="icon-toggle"></p>
-
-                    <p id="today-temp"></p>
-                    <p id="today-wind"></p>
-                    <p id="today-humid"></p>
-                </section>
+                </nav>
 
 
 
-            <!-- Section for 5-day forcast -->
-                <section id="5day-forecast" class="five-day-container">
-                    <!-- These will store data for each future day in the 5-day forecast -->
-                        <div id="day-1" class="future-forecast">
-                            <p class="icon-toggle"></p>
+                <main class="">
 
-                            <p id="day1-temp"></p>
-                            <p id="day1-wind"></p>
-                            <p id="day1-humid"></p>
-                        </div>
+                <!-- Section for today's forcasted weather -->
+                    <section id="today-forecast" class="">
+                    <div class="border border-5 border-warning text-center">
+                        <h2 id="today-header"> Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                            Cupiditate natus ad cumque id, ipsum tempore sequi, blanditiis incidunt 
+                            iusto delectus magnam pariatur, veniam culpa. Sit, soluta! 
+                            Dolorem dolore pariatur earum.</h2>
+                        <p class="icon-toggle"></p>
 
-                        <div id="day-2" class="future-forecast">
-                            <p class="icon-toggle"></p>
+                        <p id="today-temp"></p>
+                        <p id="today-wind"></p>
+                        <p id="today-humid"></p>
+                    </div>  
+                    </section>
 
-                            <p id="day2-temp"></p>
-                            <p id="day2-wind"></p>
-                            <p id="day2-humid"></p>
-                        </div>
 
-                        <div id="day-3" class="future-forecast">
-                            <p class="icon-toggle"></p>
 
-                            <p id="day3-temp"></p>
-                            <p id="day3-wind"></p>
-                            <p id="day3-humid"></p>
-                        </div>
-                            
-                        <div id="day-4" class="future-forecast">
-                            <p class="icon-toggle"></p>
+                <!-- Section for 5-day forcast -->
+                    <section id="5day-forecast" class="five-day-container">
+                        <!-- These will store data for each future day in the 5-day forecast -->
+                            <div id="day-1" class=" future-forecast border border-5 border-warning">
+                                <p class="icon-toggle">☀️</p>
 
-                            <p id="day4-temp"></p>
-                            <p id="day4-wind"></p>
-                            <p id="day4-humid"></p>
-                        </div>
+                                <p id="day1-temp">asdsas</p>
+                                <p id="day1-wind">asdas</p>
+                                <p id="day1-humid">ada</p>
+                            </div>
 
-                        <div id="day-5" class="future-forecast">
-                            <p class="icon-toggle"></p>
+                            <div id="day-2" class="future-forecast border border-5 border-warning">
+                                <p class="icon-toggle">☀️</p>
 
-                            <p id="day5-temp"></p>
-                            <p id="day5-wind"></p>
-                            <p id="day5-humid"></p>
-                        </div>
+                                <p id="day2-temp">asdas</p>
+                                <p id="day2-wind">adas</p>
+                                <p id="day2-humid">asdsa</p>
+                            </div>
 
-                </section>
+                            <div id="day-3" class="future-forecast border border-5 border-warning">
+                                <p class="icon-toggle">⛅</p>
+
+                                <p id="day3-temp">asdsa</p>
+                                <p id="day3-wind">asdsa</p>
+                                <p id="day3-humid">asdsa</p>
+                            </div>
+                                
+                            <div id="day-4" class="future-forecast border border-5 border-warning">
+                                <p class="icon-toggle">🌧️</p>
+
+                                <p id="day4-temp">asdsa</p>
+                                <p id="day4-wind">asdsa</p>
+                                <p id="day4-humid">asdsa</p>
+                            </div>
+
+                            <div id="day-5" class="future-forecast border border-5 border-warning">
+                                <p class="icon-toggle">⛈️</p>
+
+                                <p id="day5-temp">asdsa</p>
+                                <p id="day5-wind">asdsa</p>
+                                <p id="day5-humid">asdsa</p>
+                            </div>
+
+                    </section>
 
 
 
@@ -133,7 +138,7 @@
             </div>
 
             </main>
-    </div>
+        </div>
 
 
 
