@@ -21,19 +21,31 @@
 <body>
 
     <!-- needs div for container -->
-<header id="header" class="text-black navbar bg-body-tertiary d.flex
- justify-content-end mx-5 bg-info">Weather Dashboard</header>
+<header id="header" class="text-black navbar bg-body-tertiary d-flex
+ justify-content-end bg-dark">
+
+ <h1 class="text-white mx-5">Weather Dashboard</h1>
+ 
+</header>
 
 <!-- Section for search bar and search history buttons -->
-<nav>
-    <form id="search-bar">
-        <label for="City"></label>
-        <i class="fa fa-search"></i>
-        <button>Search</button>
-        <input type="text" id="search-input">
-    </form>
+<nav class="d-flex flex-column-reverse"> 
+    <div>
+        <form id="search-bar">
+            <label for="City"></label>
+            <i class="fa fa-search"></i>
+            <button>Search</button>
+            <input type="text" id="search-input">
+        </form>
+    </div>    
 
-    <div id="search-history"></div>
+    <div id="search-history" class="d-flex flex-column">
+        <p class="">placeholder</p>
+        <p class="">placeholder</p>
+        <p class="">placeholder</p>
+        <p class="">placeholder</p>
+        <p class="">placeholder</p>
+    </div>
     <!-- will append button elements as children here -->
     <!-- button elements will populate based off city search history -->
 
