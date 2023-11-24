@@ -18,19 +18,24 @@
     
     <title>⛅Travelers Weather</title>
 </head>
-<body>
+<body class="bg-black">
 
     <!-- needs div for container -->
 <header id="header" class="text-black navbar bg-body-tertiary d-flex
- justify-content-end bg-dark">
+ justify-content-end bg-primary">
 
- <h1 class="text-white mx-5">Weather Dashboard</h1>
+ <h1 class="text-light mx-5">Weather Dashboard</h1>
  
 </header>
 
 <!-- Section for search bar and search history buttons -->
-<nav class="d-flex flex-column-reverse"> 
-    <div>
+<nav class="d-flex flex-column col-lg-3">
+
+    <div class="d-flex justify-content-center">
+        <h2 class="text-light">Search For City</h2>
+    </div>
+
+    <div class="d-flex justify-content-center">
         <form id="search-bar">
             <label for="City"></label>
             <i class="fa fa-search"></i>
@@ -39,12 +44,12 @@
         </form>
     </div>    
 
-    <div id="search-history" class="d-flex flex-column">
-        <p class="">placeholder</p>
-        <p class="">placeholder</p>
-        <p class="">placeholder</p>
-        <p class="">placeholder</p>
-        <p class="">placeholder</p>
+    <div id="search-history" class="d-flex flex-column-reverse ms-4 ">
+        <button class="my-5 btn-light">placeholder5</button>
+        <button class="my-5 btn-light">placeholdert</button>
+        <button class="my-5 btn-light">placeholder3</button>
+        <button class="my-5 btn-light">placeholder2</button>
+        <button class="my-5 btn-light">placeholder1</button>
     </div>
     <!-- will append button elements as children here -->
     <!-- button elements will populate based off city search history -->
