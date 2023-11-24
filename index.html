@@ -36,16 +36,17 @@
         </header>
 
 
-        <div class="d-flex">
-            <div class="container-fluid">
-        <!-- Section for search bar and search history buttons -->
-                <nav class="">
-
-                    <div class="">
-                        <h2 class="text-light ms-2">Search For City</h2>
-                    </div>
+        <div class="d-flex min-vh-100">
+            <div class="d-flex container-fluid">
+               <!-- <div class="d-flex flex-column "> -->
+                    <!-- Section for search bar and search history buttons -->
+                <nav class="d-flex flex-column col-md-4 col-lg-4 mt-3">
 
                     <div class="d-flex justify-content-center">
+                        <h2 class="text-light ms-2 ">Search For City</h2>
+                    </div>
+
+                    <div class="d-flex justify-content-center me-5 mb-5">
                         <form id="search-bar" class="">
                             <label for="City"></label>
                             <!-- <i class="fa fa-search text-light fs-4 ms-2 "></i> -->
@@ -54,7 +55,7 @@
                         </form>
                     </div>    
 
-                    <div id="search-history" class="">
+                    <div id="search-history" class="d-flex flex-column border-top border-warning mx-3 pt-4">
                         <button class=" btn-dark border-opacity-50 border-5 border-primary btn-lg">placeholder5</button>
                         <button class=" btn-dark border-opacity-50 border-5 border-primary btn-lg">placeholder4</button>
                         <button class=" btn-dark border-opacity-50 border-5 border-primary btn-lg">placeholder3</button>
@@ -68,7 +69,7 @@
 
 
 
-                <main class="">
+                <main class="d-flex flex-column col-md-8 col-lg-8">
 
                 <!-- Section for today's forcasted weather -->
                     <section id="today-forecast" class="">
@@ -132,7 +133,7 @@
 
                     </section>
 
-
+                <!-- </div>     -->
 
 
             </div>
