@@ -36,8 +36,8 @@
         </header>
 
 
-        <div class="d-flex min-vh-100">
-            <div class="d-flex container-fluid">
+        <div class="d-flex vh-100 w">
+            <div class="d-flex container-fluid flex-column">
                <!-- <div class="d-flex flex-column "> -->
                     <!-- Section for search bar and search history buttons -->
                 <nav class="d-flex flex-column col-md-4 col-lg-4 mt-3">
@@ -49,7 +49,7 @@
                     <div class="d-flex justify-content-center me-5 mb-5">
                         <form id="search-bar" class="">
                             <label for="City"></label>
-                            <!-- <i class="fa fa-search text-light fs-4 ms-2 "></i> -->
+                            
                             <button class="btn-primary">&#x1F50E</button>
                             <input type="text" id="search-input" class="border-warning ms-2">
                         </form>
@@ -69,7 +69,9 @@
 
 
 
-                <main class="d-flex flex-column col-md-8 col-lg-8 justify-content-evenly">
+                <main class="d-flex flex-column ">
+
+                   <div class="container col-md-8 col-lg-9">
 
                 <!-- Section for today's forcasted weather -->
                     <section id="today-forecast" class="d-flex">
@@ -89,10 +91,10 @@
 
 
                 <!-- Section for 5-day forcast -->
-                    <section id="5day-forecast" class="five-day-container d-flex mx-2">
+                    <section id="5day-forecast" class="five-day-container d-flex justify-content-between">
                         <!-- These will store data for each future day in the 5-day forecast -->
                             <div id="day-1" class="future-forecast border border-5 border-primary bg-light">
-                                <p class="icon-toggle text-center">☀️</p>
+                                <p class="icon-toggle text-center fs-1">☀️</p>
 
                                 <div class="fw-bold p-3">
                                     <p id="day1-temp">asdsas</p>
@@ -102,7 +104,7 @@
                             </div>
 
                             <div id="day-2" class=" future-forecast border border-5 border-primary bg-light">
-                                <p class="icon-toggle text-center">☀️</p>
+                                <p class="icon-toggle text-center fs-1">☀️</p>
 
                                 <div class="fw-bold p-3">
                                     <p id="day2-temp">asdas</p>
@@ -112,7 +114,7 @@
                             </div>
 
                             <div id="day-3" class=" future-forecast border border-5 border-primary bg-light ">
-                                <p class="icon-toggle text-center">⛅</p>
+                                <p class="icon-toggle text-center fs-1">⛅</p>
 
                                 <div class="fw-bold p-3">
                                     <p id="day2-temp">asdas</p>
@@ -122,7 +124,7 @@
                             </div>
                                 
                             <div id="day-4" class=" future-forecast border border-5 border-primary bg-light ">
-                                <p class="icon-toggle text-center">🌧️</p>
+                                <p class="icon-toggle text-center fs-1">🌧️</p>
 
                                 <div class="fw-bold p-3">
                                     <p id="day2-temp">asdas</p>
@@ -131,8 +133,8 @@
                                 </div>
                             </div>
 
-                            <div id="day-5" class=" future-forecast border border-5 border-primary bg-light ">
-                                <p class="icon-toggle text-center">⛈️</p>
+                            <div id="day-5" class="future-forecast border border-5 border-primary bg-light ">
+                                <p class="icon-toggle text-center fs-1">⛈️</p>
 
                                 <div class="fw-bold p-3">
                                     <p id="day2-temp">asdas</p>
@@ -142,6 +144,9 @@
                             </div>
 
                     </section>
+
+
+                </div>  
 
                 <!-- </div>     -->
 
