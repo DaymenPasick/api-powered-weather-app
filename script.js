@@ -51,25 +51,12 @@ function saveSearchHistory() {
 function historyGrab() {
     
     for(i=0; i < 5; i++){
-        historyObject = JSON.parse(localStorage.getItem('history')) || {};
+        historyObject = JSON.parse(localStorage.getItem('history')) || { city: [] };
         
         }
         console.log(historyObject)
     
     }
-
-
-
-
-    // if(historyObject.city === null || historyObject.city === undefined || historyObject.city === "" || historyObject.city === ''){
-        
-    // } else {
-    // historyObject = JSON.parse(localStorage.getItem('history')) || {};
-    // }
-
-// }
-    
-// }
 
 historyGrab()
 console.log(historyObject.city)
@@ -94,12 +81,14 @@ function populateHistory(){
     for (i = 0; i < 5; i++){
         var historySlot = document.createElement('button');
         var searchCities = cityHistory;
-        if (cityHistory){
-        historySlot.textContent = searchCities[i];
+        if (searchCities === null || searchCities === undefined ||searchCities === "" ||searchCities === ''){
+                console.log('empty object/empty string returned')       
+        } else {
+            historySlot.textContent = searchCities[i];
+            searchHistoryParent.appendChild(historySlot)
+            historySlot.setAttribute("class", "history-button")
         }
-        searchHistoryParent.appendChild(historySlot)
-        historySlot.setAttribute("class", "history-button")
     }
 }
-// populateHistory();
-// console.log(searchHistoryParent.children)
+populateHistory();
+
