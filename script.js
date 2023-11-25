@@ -15,12 +15,16 @@ console.log(todaysIcon)
 
 //search history node
 var searchHistoryParent = document.getElementById('search-history')
-
+// will use this function to write searched city history into button elements
 function populateHistory(){
     for (i = 0; i < 5; i++){
-        
+        var historySlot = document.createElement('button');
+        var searchCities = "hi"
+        historySlot.textContent = searchCities
+        searchHistoryParent.appendChild(historySlot)
     }
 }
+populateHistory();
 console.log(searchHistoryParent.children)
 
 
