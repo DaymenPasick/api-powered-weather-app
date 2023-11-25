@@ -59,10 +59,11 @@ function takeFormInput(event){
     saveSearchHistory()
 }
 
+var historyObject = { city: []}
+
 function saveSearchHistory() {
-    var historyObject = {}
-       historyObject = {city:lastSearchedCity}
-       console.log(historyObject)
+
+       historyObject.city.push(lastSearchedCity)
        localStorage.setItem("history", JSON.stringify(historyObject))
    
    }
