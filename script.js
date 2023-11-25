@@ -23,22 +23,22 @@ var weatherApiKey = "1dd8986d9e675512cead5440c0f34f1e";
 
 //will handle calls to openweather geoAPI
 var geoApiCall = "http://api.openweathermap.org/geo/1.0/direct?q=Sarasota&limit=1&appid=" + weatherApiKey;
-fetch(geoApiCall)
-    .then(function (response) {
-        return response.json();
-    })
-    .then(function (data){
-        console.log(data[0]);
+// fetch(geoApiCall)
+//     .then(function (response) {
+//         return response.json();
+//     })
+//     .then(function (data){
+//         console.log(data[0]);
 
-        var cityName = data[0].name;
-        console.log("searched city: " + cityName)
-        var cityLong = data[0].lon;
-        console.log(cityName + " Longitude: " + cityLong)
-        var cityLat = data[0].lat;
-        console.log(cityName + " Latitude : " + cityLat)
+//         var cityName = data[0].name;
+//         console.log("searched city: " + cityName)
+//         var cityLong = data[0].lon;
+//         console.log(cityName + " Longitude: " + cityLong)
+//         var cityLat = data[0].lat;
+//         console.log(cityName + " Latitude : " + cityLat)
 
 
-    })
+//     })
 
 
 
@@ -71,6 +71,28 @@ function takeFormInput(event){
     event.preventDefault()
     var cityInput = document.getElementById('city-input').value;
     lastSearchedCity = cityInput;
+
+    //will handle calls to openweather geoAPI
+    var geoApiCall = "http://api.openweathermap.org/geo/1.0/direct?q="+cityInput+"&limit=1&appid=" + weatherApiKey;
+    fetch(geoApiCall)
+    .then(function (response) {
+        return response.json();
+    })
+    .then(function (data){
+        console.log(data[0]);
+
+        var cityName = data[0].name;
+        console.log("searched city: " + cityName)
+        var cityLong = data[0].lon;
+        console.log(cityName + " Longitude: " + cityLong)
+        var cityLat = data[0].lat;
+        console.log(cityName + " Latitude : " + cityLat)
+
+
+    })
+
+
+
     saveSearchHistory()
 }
 
