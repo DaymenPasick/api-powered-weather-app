@@ -10,7 +10,7 @@ var todaysWind = document.getElementById('todays-wind').textContent;
 var todaysHumid = document.getElementById('todays-humid').textContent;
 var todaysIcon = document.getElementById('todays-icon').textContent;
 todaysDate.append("Date: " + date)
-console.log(todaysIcon)
+// console.log(todaysIcon)
 
 
 
@@ -54,12 +54,12 @@ function historyGrab() {
         historyObject = JSON.parse(localStorage.getItem('history')) || { city: [] };
         
         }
-        console.log(historyObject)
+        // console.log(historyObject)
     
     }
 
 historyGrab()
-console.log(historyObject.city)
+// console.log(historyObject.city)
 
 // function setStorageLimit() {
 //     var historyLimit = 5;
@@ -73,62 +73,82 @@ console.log(historyObject.city)
 
 
 
-//search history node
+
+
+
+
+
 var cityHistory = historyObject.city
 var searchHistoryParent = document.getElementById('search-history')
 // will use this function to write searched city history into button elements
 
 
 
-
-
-
-
 function populateHistory(){
+    var createButton;
 
+        for (i = 0; i < cityHistory.length; i++) {
+            
+            if (cityHistory[i] == "" || cityHistory[i] === undefined || cityHistory[i] =='') {
+            console.log("false at: " + i)
+            } else {    
+            console.log("true at: " + i)
+            }
+    }
     
-    for (i = 0; i < 5; i++){
-        
-        var searchCities = cityHistory;
-        if (cityHistory == ""){
-            // var historySlot = document.createElement('button'); 
-            console.log('empty object/empty string returned')
+
+    // for (i = 0; i < 5; i++){ 
+    //     if (cityHistory == ""){
+    //         // var historySlot = document.createElement('button'); 
+    //         console.log('empty object/empty string returned')
             
                       
-        } else {
-            var historySlot = document.createElement('button'); 
+    //     } else {
+    //         var historySlot = document.createElement('button'); 
+    //         historySlot.textContent = cityHistory[i];
+    //         searchHistoryParent.appendChild(historySlot)
+    //         historySlot.setAttribute("class", "history-button")
+    //         console.log('not empty')  
             
-            historySlot.textContent = cityHistory[i];
-            searchHistoryParent.appendChild(historySlot)
-            historySlot.setAttribute("class", "history-button")
-            console.log('not empty')  
-            
-        }
-    }
-}
-
-function populateHistory(){
-
-    
-    for (i = 0; i < 5; i++){
-        
-        var searchCities = cityHistory;
-        if (cityHistory == ""){
-            // var historySlot = document.createElement('button'); 
-            console.log('empty object/empty string returned')
-            
-                      
-        } else {
-            var historySlot = document.createElement('button'); 
-            
-            historySlot.textContent = cityHistory[i];
-            searchHistoryParent.appendChild(historySlot)
-            historySlot.setAttribute("class", "history-button")
-            console.log('not empty')  
-            
-        }
-    }
+    //     }
+    // }
 }
 populateHistory();
+
+
+
+
+
+
+
+
+
+
+//search history node
+// var cityHistory = historyObject.city
+// var searchHistoryParent = document.getElementById('search-history')
+// // will use this function to write searched city history into button elements
+
+
+
+// function populateHistory(){
+    
+//     for (i = 0; i < 5; i++){
+        
+//         var searchCities = cityHistory;
+//         if (cityHistory[i] == ""){
+            
+//             console.log('empty object/empty string returned')          
+//         } else {
+//             var historySlot = document.createElement('button');   
+//             historySlot.textContent = cityHistory[i];
+//             searchHistoryParent.appendChild(historySlot)
+//             historySlot.setAttribute("class", "history-button")
+//             console.log('not empty')  
+            
+//         }
+//     }
+// }
+// populateHistory();
 
 //if condition passes, create button
