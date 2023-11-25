@@ -79,14 +79,21 @@ var searchHistoryParent = document.getElementById('search-history')
 // will use this function to write searched city history into button elements
 function populateHistory(){
     for (i = 0; i < 5; i++){
-        var historySlot = document.createElement('button');
+        
         var searchCities = cityHistory;
-        if (searchCities === null || searchCities === undefined ||searchCities === "" ||searchCities === ''){
-                console.log('empty object/empty string returned')       
+        if (cityHistory == ""){
+            // var historySlot = document.createElement('button'); 
+            console.log('empty object/empty string returned')
+            
+                      
         } else {
+            var historySlot = document.createElement('button'); 
+            
             historySlot.textContent = searchCities[i];
             searchHistoryParent.appendChild(historySlot)
             historySlot.setAttribute("class", "history-button")
+            console.log('not empty')  
+            
         }
     }
 }
