@@ -28,7 +28,8 @@ var weatherApiKey = "1dd8986d9e675512cead5440c0f34f1e"
 
 
 
-
+//geocode-api-call
+//http://api.openweathermap.org/geo/1.0/direct?q={city name}&limit=1&appid=weatherApiKey
 
 
 
