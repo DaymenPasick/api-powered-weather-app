@@ -47,8 +47,13 @@ fetch(weatherApiCall)
     .then(function (data){
         console.log(data);
 
+        
+
         var weatherNode = data.weather;
         console.log(weatherNode)
+
+        var iconNode = data.weather[0].icon;
+        console.log(iconNode)
 
         var temperatureNode = data.main.temp;
         console.log("Temp: " + temperatureNode)
