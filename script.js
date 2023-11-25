@@ -90,9 +90,14 @@ function populateHistory(){
         for (i = 0; i < cityHistory.length; i++) {
             
             if (cityHistory[i] == "" || cityHistory[i] === undefined || cityHistory[i] =='') {
+                createButton = false;
             console.log("false at: " + i)
+            console.log("create button: " + createButton)    
+            
             } else {    
+                createButton = true;
             console.log("true at: " + i)
+            console.log("create button: " + createButton)   
             }
     }
     
