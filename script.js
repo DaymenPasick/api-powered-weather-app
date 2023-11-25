@@ -41,8 +41,12 @@ function saveSearchHistory() {
    
    }
 
-//functionality for retrieving history from local storage
 
+
+
+
+
+//functionality for retrieving history from local storage
 function historyGrab() {
     for(i=0; i < 5; i++){
         if(historyObject === null || historyObject == undefined || historyObject === "" || historyObject === ''){
@@ -58,9 +62,16 @@ function historyGrab() {
 historyGrab()
 console.log(historyObject.city)
 
-var cityHistory = historyObject.city
+function setStorageLimit() {
+    var historyLimit = 5;
+    var limitBoolean = false; //will be triggered true when my object exceeds 5
+}
+
+
+
 
 //search history node
+var cityHistory = historyObject.city
 var searchHistoryParent = document.getElementById('search-history')
 // will use this function to write searched city history into button elements
 function populateHistory(){
