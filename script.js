@@ -16,6 +16,28 @@ todaysDate.append("Date: " + date)
 var searchBtn = document.querySelector("#search-button");
 searchBtn.addEventListener('click', takeFormInput); 
 
+// ===== API section start ======================================================
+
+var weatherApiKey = "1dd8986d9e675512cead5440c0f34f1e"
+
+
+
+
+// ===== API section end ======================================================
+
+
+
+
+
+
+
+
+
+
+
+
+
+// ===== Search Button Section Start ======================================================
 
 //function will take city search into a variable
 function takeFormInput(event){
@@ -35,6 +57,9 @@ function saveSearchHistory() {
   localStorage.setItem("history", JSON.stringify(historyObject))
 }
 
+// ===== Search Button Section Start ======================================================
+
+// ===== LocalStorage History Management Start ======================================================
 //function will retrieve city search history from local storage
 function historyGrab() {
     
@@ -67,7 +92,7 @@ function searchHistoryGenerator(){
                     if(setArrayLimit(arrayForSearchHistoryButtons)){ //after setting array limit, will also replace with 
                         arrayForSearchHistoryButtons.shift()         //most recently inputed city search
                     }  
-                    console.log(arrayForSearchHistoryButtons) 
+                    // console.log(arrayForSearchHistoryButtons) 
                 }
             }
         
@@ -92,6 +117,7 @@ function searchHistoryGenerator(){
 
 }
 searchHistoryGenerator();
+// ===== LocalStorage History Management End ======================================================
 
 
 
