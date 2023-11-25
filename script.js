@@ -26,27 +26,30 @@ function takeFormInput(event){
     event.preventDefault()
     var cityInput = document.getElementById('city-input').value;
     lastSearchedCity = cityInput;
-    console.log(cityInput)
+
+    
+
+    function saveSearchHistory() {
+          //working from here to fix tommorow  
+        historyObject.city.push(cityInput)
+        localStorage.setItem("history", JSON.stringify(historyObject))
+    
+    }
+ 
 
     saveSearchHistory()
 }
 
 //function that will save to local storage on click
-var lastSearchedCity = "" || 'place';
+var lastSearchedCity = "";
 var historyObject = { city: []}
-function saveSearchHistory() {
-
-       historyObject.city.push(lastSearchedCity)
-       localStorage.setItem("history", JSON.stringify(historyObject))
-   
-   }
-
 
 
 
 
 //functionality for retrieving history from local storage
 function historyGrab() {
+    
     for(i=0; i < 5; i++){
         if(historyObject.city === null || historyObject.city === undefined || historyObject.city === "" || historyObject.city === ''){
         
@@ -80,9 +83,10 @@ var searchHistoryParent = document.getElementById('search-history')
 function populateHistory(){
     for (i = 0; i < 5; i++){
         var historySlot = document.createElement('button');
-        var searchCities = cityHistory[i]
-        historySlot.textContent = searchCities
-        
+        var searchCities = cityHistory;
+        if (cityHistory){
+        historySlot.textContent = searchCities[i];
+        }
         searchHistoryParent.appendChild(historySlot)
         historySlot.setAttribute("class", "history-button")
     }
