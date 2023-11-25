@@ -1,20 +1,27 @@
 
 //Navigational variables
 
+//current weather space node
+
 
 
 //Buttons
+var searchBtn = document.querySelector("#search-button");
+searchBtn.addEventListener('click', takeFormInput); 
 
 
-//for search button
+//to test clicks
 function clickTest(event) {
-    event.preventDefault();
-    console.log('clicked');
+    event.preventDefault()
+    console.log('clicked')
 }
 
-var searchBtn = document.querySelector("#search-button");
-searchBtn.addEventListener('click', clickTest); 
-
+//to take in city search value
+function takeFormInput(event){
+    event.preventDefault()
+    var cityInput = document.getElementById('city-input').value;
+    console.log(cityInput)
+}
 
 
 
