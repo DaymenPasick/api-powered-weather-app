@@ -59,17 +59,9 @@ historyGrab()
 
 
 
-
-
-
-
-
-
-
 var cityHistory = historyObject.city
 var searchHistoryParent = document.getElementById('search-history')
 // will use this function to write searched city history into button elements
-
 
 
 function searchHistoryGenerator(){
@@ -77,37 +69,34 @@ function searchHistoryGenerator(){
     var siftedHistory; 
     var arrayForSearchHistoryButtons = [];
     
+        //loop will take cityHistory local storage values and create an array that will be
+        //used to create search history buttons
         for (i = 0; i < cityHistory.length; i++) {
             if (cityHistory[i] == "" || cityHistory[i] === undefined || cityHistory[i] =='') {
                 } else {    
                     siftedHistory = cityHistory[i];
                     arrayForSearchHistoryButtons.push(siftedHistory)
-                    if(setArrayLimit(arrayForSearchHistoryButtons)){
-                        arrayForSearchHistoryButtons.shift()
+                    if(setArrayLimit(arrayForSearchHistoryButtons)){ //after setting array limit, will also replace with 
+                        arrayForSearchHistoryButtons.shift()         //most recently inputed city search
                     }  
                     console.log(arrayForSearchHistoryButtons) 
                 }
             }
-
+        
+        //loop will handle actual creation of city search history buttons   
         for (i = 0; i < arrayForSearchHistoryButtons.length; i++) {
                 var historySlot = document.createElement('button');
                 historySlot.setAttribute("class", "history-button")
                 historySlot.textContent = arrayForSearchHistoryButtons[i];
                 searchHistoryParent.appendChild(historySlot)
             }
-
-
-
-        if(setArrayLimit(arrayForSearchHistoryButtons)){
-            arrayForSearchHistoryButtons.shift()
-        }    
-
-
+ 
+        //loop will limit ammount of  city searches used to populate city history buttons    
         function setArrayLimit(array) {
             var historyLimit = 5;
-            var limitBoolean = false; //will be triggered true when my object exceeds 5
+            var limitBoolean = false; //will be triggered true when my array exceeds 5 
             if(array.length > historyLimit){
-                limitBoolean = true; //should change when object.city is gr8er than 5
+                limitBoolean = true; //should change to true when length of array is greater than history limit
             }
             
             return limitBoolean;
