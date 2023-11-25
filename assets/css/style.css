@@ -1,6 +1,10 @@
 /* style sheet */
 
+:root {
+    --button-color: black;
+    --button-txt: white;
 
+}
 
 
 
@@ -12,7 +16,12 @@ form .search-bar {
 
 }
 
-#search-history {
+
+
+/* sear history */
+.history-button {
+    color:var(--button-txt);
+    background-color: var(--button-color);
 
 }
 /* === nav/search section end ==================================== */
@@ -20,16 +29,6 @@ form .search-bar {
 
 
 /* === Styling for forecast blocks start ========================== */
-.today-container {
 
-}
-
-.five-day-container {
-
-}
-
-.future-forecast {
-
-}
 
 /* === Styling for forecast blocks end ========================== */

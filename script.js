@@ -21,7 +21,9 @@ function populateHistory(){
         var historySlot = document.createElement('button');
         var searchCities = "hi"
         historySlot.textContent = searchCities
+        
         searchHistoryParent.appendChild(historySlot)
+        historySlot.setAttribute("class", "history-button")
     }
 }
 populateHistory();
