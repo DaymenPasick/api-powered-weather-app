@@ -39,7 +39,21 @@ var weatherApiKey = "1dd8986d9e675512cead5440c0f34f1e";
 //     })
 
 
+var weatherApiCall = "https://api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&appid={API key}"
+fetch(weatherApiCall)
+    .then(function (response) {
+        return response.json();
+    })
+    .then(function (data){
+        console.log(data[0]);
 
+        var cityName = data[0].name;
+        console.log("searched city: " + cityName)
+        var cityLong = data[0].lon;
+        console.log(cityName + " Longitude: " + cityLong)
+        var cityLat = data[0].lat;
+        console.log(cityName + " Latitude : " + cityLat)
+    })
 
 
 
@@ -86,8 +100,6 @@ function takeFormInput(event){
         console.log(cityName + " Longitude: " + cityLong)
         var cityLat = data[0].lat;
         console.log(cityName + " Latitude : " + cityLat)
-
-
     })
 
 
