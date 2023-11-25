@@ -3,6 +3,7 @@
 :root {
     --button-color: black;
     --button-txt: white;
+    --theme-color: rgb(68, 68, 235)
 
 }
 
@@ -22,6 +23,7 @@ form .search-bar {
 .history-button {
     color:var(--button-txt);
     background-color: var(--button-color);
+    border: solid 5px var(--theme-color)
 
 }
 /* === nav/search section end ==================================== */
