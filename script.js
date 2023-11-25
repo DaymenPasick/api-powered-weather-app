@@ -1,7 +1,6 @@
 
-//Navigational variables
+//Household variables
 var date = dayjs().format();
-
 
 //current-day weather space node
 var todaysDate = document.getElementById('todays-date');
@@ -13,41 +12,30 @@ todaysDate.append("Date: " + date)
 // console.log(todaysIcon)
 
 
-
-
-
 //Buttons
 var searchBtn = document.querySelector("#search-button");
 searchBtn.addEventListener('click', takeFormInput); 
 
 
-//to take in city search value
+//function will take city search into a variable
 function takeFormInput(event){
     event.preventDefault()
     var cityInput = document.getElementById('city-input').value;
     lastSearchedCity = cityInput;
-
-    
-
-
-
     saveSearchHistory()
 }
+
 
 //function that will save to local storage on click
 var lastSearchedCity = "";
 var historyObject = { city: []}
 
 function saveSearchHistory() {
-
   historyObject.city.push(lastSearchedCity)
   localStorage.setItem("history", JSON.stringify(historyObject))
-
 }
 
-
-
-//functionality for retrieving history from local storage
+//function will retrieve city search history from local storage
 function historyGrab() {
     
     for(i=0; i < 5; i++){
@@ -57,12 +45,12 @@ function historyGrab() {
 
 historyGrab()
 
-
-
+//this variable created using local-storage object from historyGrab()
 var cityHistory = historyObject.city
-var searchHistoryParent = document.getElementById('search-history')
-// will use this function to write searched city history into button elements
 
+//function will sort through local storage search history
+//and generate recently searched city buttons accordingly
+var searchHistoryParent = document.getElementById('search-history')
 
 function searchHistoryGenerator(){
     var historySlot = document.createElement('button');
