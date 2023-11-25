@@ -88,7 +88,7 @@ function populateHistory(){
     var createButton;
     var historySlot = document.createElement('button');
     var siftedHistory; 
-
+    var writeObject = [];
     
 
         for (i = 0; i < cityHistory.length; i++) {
@@ -100,18 +100,19 @@ function populateHistory(){
             
             } else {    
                 createButton = true;
-                console.log(cityHistory[i])
+                // console.log(cityHistory[i])
                 siftedHistory = cityHistory[i];
-                // console.log(siftedHistory)
+                writeObject.push(siftedHistory)
+                console.log(writeObject)
             // console.log("true at: " + i)
             // console.log("create button: " + createButton)   
             }
         }
 
-        for (i = 0; i < siftedHistory.length; i++) {
+        for (i = 0; i < writeObject.length; i++) {
                 var historySlot = document.createElement('button');
                 historySlot.setAttribute("class", "history-button")
-                historySlot.textContent = siftedHistory;
+                historySlot.textContent = writeObject[i];
                 searchHistoryParent.appendChild(historySlot)
             }
         
@@ -138,7 +139,7 @@ function populateHistory(){
     //     }
     // }
 }
-// populateHistory();
+populateHistory();
 
 
 
@@ -148,32 +149,3 @@ function populateHistory(){
 
 
 
-
-//search history node
-// var cityHistory = historyObject.city
-// var searchHistoryParent = document.getElementById('search-history')
-// // will use this function to write searched city history into button elements
-
-
-
-// function populateHistory(){
-    
-//     for (i = 0; i < 5; i++){
-        
-//         var searchCities = cityHistory;
-//         if (cityHistory[i] == ""){
-            
-//             console.log('empty object/empty string returned')          
-//         } else {
-//             var historySlot = document.createElement('button');   
-//             historySlot.textContent = cityHistory[i];
-//             searchHistoryParent.appendChild(historySlot)
-//             historySlot.setAttribute("class", "history-button")
-//             console.log('not empty')  
-            
-//         }
-//     }
-// }
-// populateHistory();
-
-//if condition passes, create button
