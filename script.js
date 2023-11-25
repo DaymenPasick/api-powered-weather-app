@@ -45,9 +45,21 @@ fetch(weatherApiCall)
         return response.json();
     })
     .then(function (data){
-        console.log(data[6]);
+        console.log(data);
 
-        // var cityName = data[0].name;
+        var weatherNode = data.weather;
+        console.log(weatherNode)
+
+        var temperatureNode = data.main.temp;
+        console.log("Temp: " + temperatureNode)
+
+        var humidtyNode = data.main.humidity;
+        console.log("Humidty: " + humidtyNode)
+
+        var windNode = data.wind.speed;
+        console.log("Wind: " + windNode)
+
+
         // console.log("searched city: " + cityName)
         // var cityLong = data[0].lon;
         // console.log(cityName + " Longitude: " + cityLong)
