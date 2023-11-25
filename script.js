@@ -39,7 +39,7 @@ var lastSearchedCity = "";
 var historyObject = { city: []}
 
 function saveSearchHistory() {
-    //working from here to fix tommorow  
+
   historyObject.city.push(lastSearchedCity)
   localStorage.setItem("history", JSON.stringify(historyObject))
 
@@ -52,14 +52,10 @@ function historyGrab() {
     
     for(i=0; i < 5; i++){
         historyObject = JSON.parse(localStorage.getItem('history')) || { city: [] };
-        
         }
-        // console.log(historyObject)
-    
     }
 
 historyGrab()
-// console.log(historyObject.city)
 
 // function setStorageLimit() {
 //     var historyLimit = 5;
@@ -85,29 +81,18 @@ var searchHistoryParent = document.getElementById('search-history')
 
 
 function populateHistory(){
-    var createButton;
     var historySlot = document.createElement('button');
     var siftedHistory; 
     var writeObject = [];
     
-
         for (i = 0; i < cityHistory.length; i++) {
-            
             if (cityHistory[i] == "" || cityHistory[i] === undefined || cityHistory[i] =='') {
-                createButton = false;
-            // console.log("false at: " + i)
-            // console.log("create button: " + createButton)    
-            
-            } else {    
-                createButton = true;
-                // console.log(cityHistory[i])
-                siftedHistory = cityHistory[i];
-                writeObject.push(siftedHistory)
-                console.log(writeObject)
-            // console.log("true at: " + i)
-            // console.log("create button: " + createButton)   
+                } else {    
+                    siftedHistory = cityHistory[i];
+                    writeObject.push(siftedHistory)
+                    console.log(writeObject) 
+                }
             }
-        }
 
         for (i = 0; i < writeObject.length; i++) {
                 var historySlot = document.createElement('button');
@@ -115,29 +100,6 @@ function populateHistory(){
                 historySlot.textContent = writeObject[i];
                 searchHistoryParent.appendChild(historySlot)
             }
-        
-            //             var historySlot = document.createElement('button');   
-//             historySlot.textContent = cityHistory[i];
-//             searchHistoryParent.appendChild(historySlot)
-//             historySlot.setAttribute("class", "history-button")
-//             console.log('not empty') 
-    
-
-    // for (i = 0; i < 5; i++){ 
-    //     if (cityHistory == ""){
-    //         //
-    //         console.log('empty object/empty string returned')
-            
-                      
-    //     } else {
-    //         var historySlot = document.createElement('button'); 
-    //         
-    //         
-    //         
-    //         console.log('not empty')  
-            
-    //     }
-    // }
 }
 populateHistory();
 
