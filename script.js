@@ -50,6 +50,11 @@ function takeFormInput(event){
 }
 
 
+//function that will save to local storage on click
+
+function saveSearchHistory() {
+    
+}
 
 
 

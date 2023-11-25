@@ -1,7 +1,7 @@
 /* style sheet */
 
 :root {
-    --button-color: black;
+    --button-color: rgb(40, 37, 37);
     --button-txt: white;
     --theme-color: rgb(68, 68, 235)
 
@@ -23,7 +23,8 @@ form .search-bar {
 .history-button {
     color:var(--button-txt);
     background-color: var(--button-color);
-    border: solid 5px var(--theme-color)
+    border: solid 5px var(--theme-color);
+    margin:30px 0px;
 
 }
 /* === nav/search section end ==================================== */
