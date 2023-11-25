@@ -47,13 +47,22 @@ function takeFormInput(event){
     event.preventDefault()
     var cityInput = document.getElementById('city-input').value;
     console.log(cityInput)
+
+
+
+
+
+    function saveSearchHistory() {
+        localStorage.setItem("city", cityInput)
+    }
+    saveSearchHistory()
 }
 
 
 //function that will save to local storage on click
 
 function saveSearchHistory() {
-    
+    localStorage.setItem("city", cityInput)
 }
 
 
