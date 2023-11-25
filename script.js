@@ -32,6 +32,7 @@ function takeFormInput(event){
 
 
     saveSearchHistory()
+    searchHistoryGenerator()
 }
 
 //function that will save to local storage on click
@@ -57,14 +58,6 @@ function historyGrab() {
 
 historyGrab()
 
-// function setStorageLimit() {
-//     var historyLimit = 5;
-//     var limitBoolean = false; //will be triggered true when my object exceeds 5
-//     if(historyObject.length > historyLimit){
-//         limitBoolean = true; //should change when object.city is gr8er than 5
-//     }
-//     return historyLimit;
-// }
 
 
 
@@ -80,28 +73,41 @@ var searchHistoryParent = document.getElementById('search-history')
 
 
 
-function populateHistory(){
+function searchHistoryGenerator(){
     var historySlot = document.createElement('button');
     var siftedHistory; 
-    var writeObject = [];
+    var arrayForSearchHistoryButtons = [];
     
         for (i = 0; i < cityHistory.length; i++) {
             if (cityHistory[i] == "" || cityHistory[i] === undefined || cityHistory[i] =='') {
                 } else {    
                     siftedHistory = cityHistory[i];
-                    writeObject.push(siftedHistory)
-                    console.log(writeObject) 
+                    arrayForSearchHistoryButtons.push(siftedHistory)
+                    console.log(arrayForSearchHistoryButtons) 
                 }
             }
 
-        for (i = 0; i < writeObject.length; i++) {
+        for (i = 0; i < arrayForSearchHistoryButtons.length; i++) {
                 var historySlot = document.createElement('button');
                 historySlot.setAttribute("class", "history-button")
-                historySlot.textContent = writeObject[i];
+                historySlot.textContent = arrayForSearchHistoryButtons[i];
                 searchHistoryParent.appendChild(historySlot)
             }
+
+
+
+        function setStorageLimit(object) {
+            var historyLimit = 5;
+            var limitBoolean = false; //will be triggered true when my object exceeds 5
+            if(object.length > historyLimit){
+                limitBoolean = true; //should change when object.city is gr8er than 5
+            }
+            
+            return limitBoolean;
+        }
+
 }
-populateHistory();
+searchHistoryGenerator();
 
 
 
