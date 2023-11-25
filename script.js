@@ -39,38 +39,34 @@ var weatherApiKey = "1dd8986d9e675512cead5440c0f34f1e";
 //     })
 
 
-var weatherApiCall = "https://api.openweathermap.org/data/2.5/weather?lat=35.00018151&lon=-80.8556287&appid="+weatherApiKey;
-fetch(weatherApiCall)
-    .then(function (response) {
-        return response.json();
-    })
-    .then(function (data){
-        console.log(data);
+
+//will handle calls to openweatherApi and make node variables accordingly
+// var weatherApiCall = "https://api.openweathermap.org/data/2.5/weather?lat=35.00018151&lon=-80.8556287&appid="+weatherApiKey;
+// fetch(weatherApiCall)
+//     .then(function (response) {
+//         return response.json();
+//     })
+//     .then(function (data){
+//         console.log(data);
 
         
 
-        var weatherNode = data.weather;
-        console.log(weatherNode)
+//         var weatherNode = data.weather;
+//         console.log(weatherNode)
 
-        var iconNode = data.weather[0].icon;
-        console.log(iconNode)
+//         var iconNode = data.weather[0].icon;
+//         console.log(iconNode)
 
-        var temperatureNode = data.main.temp;
-        console.log("Temp: " + temperatureNode)
+//         var temperatureNode = data.main.temp;
+//         console.log("Temp: " + temperatureNode)
 
-        var humidtyNode = data.main.humidity;
-        console.log("Humidty: " + humidtyNode)
+//         var humidtyNode = data.main.humidity;
+//         console.log("Humidty: " + humidtyNode)
 
-        var windNode = data.wind.speed;
-        console.log("Wind: " + windNode)
+//         var windNode = data.wind.speed;
+//         console.log("Wind: " + windNode)
 
-
-        // console.log("searched city: " + cityName)
-        // var cityLong = data[0].lon;
-        // console.log(cityName + " Longitude: " + cityLong)
-        // var cityLat = data[0].lat;
-        // console.log(cityName + " Latitude : " + cityLat)
-    })
+//     })
 
 
 
@@ -95,11 +91,17 @@ fetch(weatherApiCall)
 
 // ===== Search Button Section Start ======================================================
 
+
+var latForApi;
+var longForApi;
+
 //function will take city search into a variable
 function takeFormInput(event){
     event.preventDefault()
     var cityInput = document.getElementById('city-input').value;
     lastSearchedCity = cityInput;
+
+
 
     //will handle calls to openweather geoAPI
     var geoApiCall = "http://api.openweathermap.org/geo/1.0/direct?q="+cityInput+"&limit=1&appid=" + weatherApiKey;
@@ -117,6 +119,39 @@ function takeFormInput(event){
         console.log(cityName + " Longitude: " + cityLong)
         var cityLat = data[0].lat;
         console.log(cityName + " Latitude : " + cityLat)
+
+        latForApi = cityLat;
+        longForApi = cityLong;
+    })
+    
+
+    //var weatherApiCall = "https://api.openweathermap.org/data/2.5/weather?lat=35.00018151&lon=-80.8556287&appid="+weatherApiKey;
+    //will handle calls to openweatherApi and make node variables accordingly
+var weatherApiCall = "https://api.openweathermap.org/data/2.5/weather?lat=" + latForApi +"&lon=" + longForApi + "&appid=" + weatherApiKey;
+fetch(weatherApiCall)
+    .then(function (response) {
+        return response.json();
+    })
+    .then(function (data){
+        console.log(data);
+
+        
+
+        var weatherNode = data.weather;
+        console.log(weatherNode)
+
+        var iconNode = data.weather[0].icon;
+        console.log(iconNode)
+
+        var temperatureNode = data.main.temp;
+        console.log("Temp: " + temperatureNode)
+
+        var humidtyNode = data.main.humidity;
+        console.log("Humidty: " + humidtyNode)
+
+        var windNode = data.wind.speed;
+        console.log("Wind: " + windNode)
+        
     })
 
 
