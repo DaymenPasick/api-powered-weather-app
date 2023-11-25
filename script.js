@@ -44,7 +44,7 @@ function saveSearchHistory() {
 //functionality for retrieving history from local storage
 
 function historyGrab() {
-    for(i=0; i < localStorage.length; i++){
+    for(i=0; i < 5; i++){
         if(historyObject === null || historyObject == undefined || historyObject === "" || historyObject === ''){
         
         } else {
