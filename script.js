@@ -65,6 +65,10 @@ console.log(historyObject.city)
 function setStorageLimit() {
     var historyLimit = 5;
     var limitBoolean = false; //will be triggered true when my object exceeds 5
+    if(historyObject.length > historyLimit){
+        limitBoolean = true; //should change when object.city is gr8er than 5
+    }
+    return historyLimit;
 }
 
 
