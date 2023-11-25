@@ -1,7 +1,27 @@
 
 //Navigational variables
+var date = dayjs().format();
 
-//current weather space node
+//current-day weather space node
+var todaysDate = document.getElementById('todays-date');
+var todaysTemp = document.getElementById('todays-temp').textContent;
+var todaysWind = document.getElementById('todays-wind').textContent;
+var todaysHumid = document.getElementById('todays-humid').textContent;
+var todaysIcon = document.getElementById('todays-icon').textContent;
+todaysDate.append("Date: " + date)
+console.log(todaysIcon)
+
+
+
+//search history node
+var searchHistoryParent = document.getElementById('search-history')
+
+function populateHistory(){
+    for (i = 0; i < 5; i++){
+        
+    }
+}
+console.log(searchHistoryParent.children)
 
 
 
