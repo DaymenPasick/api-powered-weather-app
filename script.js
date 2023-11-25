@@ -32,7 +32,6 @@ function takeFormInput(event){
 
 
     saveSearchHistory()
-    searchHistoryGenerator()
 }
 
 //function that will save to local storage on click
@@ -83,6 +82,9 @@ function searchHistoryGenerator(){
                 } else {    
                     siftedHistory = cityHistory[i];
                     arrayForSearchHistoryButtons.push(siftedHistory)
+                    if(setStorageLimit(arrayForSearchHistoryButtons)){
+                        arrayForSearchHistoryButtons.shift()
+                    }  
                     console.log(arrayForSearchHistoryButtons) 
                 }
             }
@@ -96,10 +98,15 @@ function searchHistoryGenerator(){
 
 
 
-        function setStorageLimit(object) {
+        if(setStorageLimit(arrayForSearchHistoryButtons)){
+            arrayForSearchHistoryButtons.shift()
+        }    
+
+
+        function setStorageLimit(array) {
             var historyLimit = 5;
             var limitBoolean = false; //will be triggered true when my object exceeds 5
-            if(object.length > historyLimit){
+            if(array.length > historyLimit){
                 limitBoolean = true; //should change when object.city is gr8er than 5
             }
             
