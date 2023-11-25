@@ -45,22 +45,21 @@ function saveSearchHistory() {
 
 
 
-
 //functionality for retrieving history from local storage
 function historyGrab() {
     for(i=0; i < 5; i++){
         if(historyObject === null || historyObject == undefined || historyObject === "" || historyObject === ''){
         
         } else {
-        historyObject = JSON.parse(localStorage.getItem('history'));
+        historyObject = JSON.parse(localStorage.getItem('history')) || {};
         }
-        // console.log(historyObject.city)
+        console.log(historyObject.city)
     }
     
 }
 
-historyGrab()
-console.log(historyObject.city)
+
+// console.log(historyObject.city)
 
 function setStorageLimit() {
     var historyLimit = 5;
@@ -88,5 +87,5 @@ function populateHistory(){
         historySlot.setAttribute("class", "history-button")
     }
 }
-populateHistory();
-console.log(searchHistoryParent.children)
+// populateHistory();
+// console.log(searchHistoryParent.children)
