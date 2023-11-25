@@ -18,13 +18,18 @@ searchBtn.addEventListener('click', takeFormInput);
 
 // ===== API section start ======================================================
 
-var weatherApiKey = "1dd8986d9e675512cead5440c0f34f1e"
+var weatherApiKey = "1dd8986d9e675512cead5440c0f34f1e";
 
-//geocode-api-call
-//http://api.openweathermap.org/geo/1.0/direct?q={city name}&limit=1&appid=weatherApiKey
 var geoApiCall = "http://api.openweathermap.org/geo/1.0/direct?q=Sarasota&limit=1&appid=" + weatherApiKey;
 
 fetch(geoApiCall)
+    .then(function (response) {
+        return response.json();
+    })
+    .then(function (data){
+        console.log(data)
+
+    })
 
 
 // ===== API section end ======================================================
