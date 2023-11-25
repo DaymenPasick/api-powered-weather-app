@@ -29,13 +29,7 @@ function takeFormInput(event){
 
     
 
-    function saveSearchHistory() {
-          //working from here to fix tommorow  
-        historyObject.city.push(cityInput)
-        localStorage.setItem("history", JSON.stringify(historyObject))
-    
-    }
- 
+
 
     saveSearchHistory()
 }
@@ -44,6 +38,12 @@ function takeFormInput(event){
 var lastSearchedCity = "";
 var historyObject = { city: []}
 
+function saveSearchHistory() {
+    //working from here to fix tommorow  
+  historyObject.city.push(lastSearchedCity)
+  localStorage.setItem("history", JSON.stringify(historyObject))
+
+}
 
 
 
@@ -51,18 +51,28 @@ var historyObject = { city: []}
 function historyGrab() {
     
     for(i=0; i < 5; i++){
-        if(historyObject.city === null || historyObject.city === undefined || historyObject.city === "" || historyObject.city === ''){
-        
-        } else {
         historyObject = JSON.parse(localStorage.getItem('history')) || {};
+        
         }
+        console.log(historyObject)
     
     }
+
+
+
+
+    // if(historyObject.city === null || historyObject.city === undefined || historyObject.city === "" || historyObject.city === ''){
+        
+    // } else {
+    // historyObject = JSON.parse(localStorage.getItem('history')) || {};
+    // }
+
+// }
     
-}
+// }
 
 historyGrab()
-// console.log(historyObject.city)
+console.log(historyObject.city)
 
 // function setStorageLimit() {
 //     var historyLimit = 5;
@@ -91,5 +101,5 @@ function populateHistory(){
         historySlot.setAttribute("class", "history-button")
     }
 }
-populateHistory();
+// populateHistory();
 // console.log(searchHistoryParent.children)
