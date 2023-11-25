@@ -86,39 +86,59 @@ var searchHistoryParent = document.getElementById('search-history')
 
 function populateHistory(){
     var createButton;
+    var historySlot = document.createElement('button');
+    var siftedHistory; 
+
+    
 
         for (i = 0; i < cityHistory.length; i++) {
             
             if (cityHistory[i] == "" || cityHistory[i] === undefined || cityHistory[i] =='') {
                 createButton = false;
-            console.log("false at: " + i)
-            console.log("create button: " + createButton)    
+            // console.log("false at: " + i)
+            // console.log("create button: " + createButton)    
             
             } else {    
                 createButton = true;
-            console.log("true at: " + i)
-            console.log("create button: " + createButton)   
+                console.log(cityHistory[i])
+                siftedHistory = cityHistory[i];
+                // console.log(siftedHistory)
+            // console.log("true at: " + i)
+            // console.log("create button: " + createButton)   
             }
-    }
+        }
+
+        for (i = 0; i < siftedHistory.length; i++) {
+                var historySlot = document.createElement('button');
+                historySlot.setAttribute("class", "history-button")
+                historySlot.textContent = siftedHistory;
+                searchHistoryParent.appendChild(historySlot)
+            }
+        
+            //             var historySlot = document.createElement('button');   
+//             historySlot.textContent = cityHistory[i];
+//             searchHistoryParent.appendChild(historySlot)
+//             historySlot.setAttribute("class", "history-button")
+//             console.log('not empty') 
     
 
     // for (i = 0; i < 5; i++){ 
     //     if (cityHistory == ""){
-    //         // var historySlot = document.createElement('button'); 
+    //         //
     //         console.log('empty object/empty string returned')
             
                       
     //     } else {
     //         var historySlot = document.createElement('button'); 
-    //         historySlot.textContent = cityHistory[i];
-    //         searchHistoryParent.appendChild(historySlot)
-    //         historySlot.setAttribute("class", "history-button")
+    //         
+    //         
+    //         
     //         console.log('not empty')  
             
     //     }
     // }
 }
-populateHistory();
+// populateHistory();
 
 
 
