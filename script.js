@@ -82,7 +82,7 @@ function searchHistoryGenerator(){
                 } else {    
                     siftedHistory = cityHistory[i];
                     arrayForSearchHistoryButtons.push(siftedHistory)
-                    if(setStorageLimit(arrayForSearchHistoryButtons)){
+                    if(setArrayLimit(arrayForSearchHistoryButtons)){
                         arrayForSearchHistoryButtons.shift()
                     }  
                     console.log(arrayForSearchHistoryButtons) 
@@ -98,12 +98,12 @@ function searchHistoryGenerator(){
 
 
 
-        if(setStorageLimit(arrayForSearchHistoryButtons)){
+        if(setArrayLimit(arrayForSearchHistoryButtons)){
             arrayForSearchHistoryButtons.shift()
         }    
 
 
-        function setStorageLimit(array) {
+        function setArrayLimit(array) {
             var historyLimit = 5;
             var limitBoolean = false; //will be triggered true when my object exceeds 5
             if(array.length > historyLimit){
