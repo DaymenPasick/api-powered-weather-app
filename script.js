@@ -31,8 +31,8 @@ function takeFormInput(event){
     saveSearchHistory()
 }
 
-//function that will save to local storage on click1
-var lastSearchedCity = "";
+//function that will save to local storage on click
+var lastSearchedCity = "" || 'place';
 var historyObject = { city: []}
 function saveSearchHistory() {
 
@@ -48,27 +48,27 @@ function saveSearchHistory() {
 //functionality for retrieving history from local storage
 function historyGrab() {
     for(i=0; i < 5; i++){
-        if(historyObject === null || historyObject == undefined || historyObject === "" || historyObject === ''){
+        if(historyObject.city === null || historyObject.city === undefined || historyObject.city === "" || historyObject.city === ''){
         
         } else {
         historyObject = JSON.parse(localStorage.getItem('history')) || {};
         }
-        console.log(historyObject.city)
+    
     }
     
 }
 
-
+historyGrab()
 // console.log(historyObject.city)
 
-function setStorageLimit() {
-    var historyLimit = 5;
-    var limitBoolean = false; //will be triggered true when my object exceeds 5
-    if(historyObject.length > historyLimit){
-        limitBoolean = true; //should change when object.city is gr8er than 5
-    }
-    return historyLimit;
-}
+// function setStorageLimit() {
+//     var historyLimit = 5;
+//     var limitBoolean = false; //will be triggered true when my object exceeds 5
+//     if(historyObject.length > historyLimit){
+//         limitBoolean = true; //should change when object.city is gr8er than 5
+//     }
+//     return historyLimit;
+// }
 
 
 
@@ -87,5 +87,5 @@ function populateHistory(){
         historySlot.setAttribute("class", "history-button")
     }
 }
-// populateHistory();
+populateHistory();
 // console.log(searchHistoryParent.children)
