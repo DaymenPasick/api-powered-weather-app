@@ -14,23 +14,8 @@ console.log(todaysIcon)
 
 
 
-//search history node
-var searchHistoryParent = document.getElementById('search-history')
-// will use this function to write searched city history into button elements
-function populateHistory(){
-    for (i = 0; i < 5; i++){
-        var historySlot = document.createElement('button');
-        var searchCities = "hi"
-        historySlot.textContent = searchCities
-        
-        searchHistoryParent.appendChild(historySlot)
-        historySlot.setAttribute("class", "history-button")
-    }
-}
-populateHistory();
-console.log(searchHistoryParent.children)
 
-1
+
 //Buttons
 var searchBtn = document.querySelector("#search-button");
 searchBtn.addEventListener('click', takeFormInput); 
@@ -70,6 +55,23 @@ function historyGrab() {
     
 }
 
-
 historyGrab()
 console.log(historyObject.city)
+
+var cityHistory = historyObject.city
+
+//search history node
+var searchHistoryParent = document.getElementById('search-history')
+// will use this function to write searched city history into button elements
+function populateHistory(){
+    for (i = 0; i < 5; i++){
+        var historySlot = document.createElement('button');
+        var searchCities = cityHistory[i]
+        historySlot.textContent = searchCities
+        
+        searchHistoryParent.appendChild(historySlot)
+        historySlot.setAttribute("class", "history-button")
+    }
+}
+populateHistory();
+console.log(searchHistoryParent.children)
