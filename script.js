@@ -22,7 +22,7 @@ var weatherApiKey = "1dd8986d9e675512cead5440c0f34f1e";
 
 
 //will handle calls to openweather geoAPI
-var geoApiCall = "http://api.openweathermap.org/geo/1.0/direct?q=Sarasota&limit=1&appid=" + weatherApiKey;
+// var geoApiCall = "http://api.openweathermap.org/geo/1.0/direct?q=Sarasota&limit=1&appid=" + weatherApiKey;
 // fetch(geoApiCall)
 //     .then(function (response) {
 //         return response.json();
@@ -36,8 +36,6 @@ var geoApiCall = "http://api.openweathermap.org/geo/1.0/direct?q=Sarasota&limit=
 //         console.log(cityName + " Longitude: " + cityLong)
 //         var cityLat = data[0].lat;
 //         console.log(cityName + " Latitude : " + cityLat)
-
-
 //     })
 
 
@@ -79,7 +77,8 @@ function takeFormInput(event){
         return response.json();
     })
     .then(function (data){
-        console.log(data[0]);
+        //to test api response
+        // console.log(data);
 
         var cityName = data[0].name;
         console.log("searched city: " + cityName)
