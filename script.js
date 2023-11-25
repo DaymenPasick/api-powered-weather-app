@@ -20,7 +20,11 @@ searchBtn.addEventListener('click', takeFormInput);
 
 var weatherApiKey = "1dd8986d9e675512cead5440c0f34f1e"
 
+//geocode-api-call
+//http://api.openweathermap.org/geo/1.0/direct?q={city name}&limit=1&appid=weatherApiKey
+var geoApiCall = "http://api.openweathermap.org/geo/1.0/direct?q=Sarasota&limit=1&appid=" + weatherApiKey;
 
+fetch(geoApiCall)
 
 
 // ===== API section end ======================================================
@@ -28,8 +32,7 @@ var weatherApiKey = "1dd8986d9e675512cead5440c0f34f1e"
 
 
 
-//geocode-api-call
-//http://api.openweathermap.org/geo/1.0/direct?q={city name}&limit=1&appid=weatherApiKey
+
 
 
 
