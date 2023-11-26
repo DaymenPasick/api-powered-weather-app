@@ -159,11 +159,34 @@ function getForecastCall(lat, lon) {
         
                 document.getElementById('day5-day').textContent = dayjs(dateNode5).format('dddd');
                 document.getElementById('day5-date').textContent = dayjs(dateNode5).format('M/YYYY');
-                document.getElementById('day5-icon').textContent = iconNode4;
+                document.getElementById('day5-icon').textContent = iconNode5;
                 document.getElementById('day5-temp').textContent = "Temperature: " + temperatureNode5;
                 document.getElementById('day5-humid').textContent = "Humidity: " + humidtyNode5;
                 document.getElementById('day5-wind').textContent = "Wind: " + windNode5;
                 //Day 5 forecast section end-----------------
+
+
+                //Day 6 forecast section start-----------------
+                var weatherNode6= data.list[40].weather;
+                console.log(weatherNode6)
+                var iconNode6 = data.list[40].weather[0].icon;
+                console.log("Icon: " + iconNode6)
+                var temperatureNode6 = data.list[40].main.temp;
+                console.log("Temp: " + temperatureNode6)
+                var humidtyNode6 = data.list[40].main.humidity;
+                console.log("Humidty: " + humidtyNode6)
+                var windNode6 = data.list[40].wind.speed;
+                console.log("Wind: " + windNode6)
+                var dateNode6 = data.list[40].dt_txt;
+                console.log(dateNode6);
+        
+                document.getElementById('day6-day').textContent = dayjs(dateNode6).format('dddd');
+                document.getElementById('day6-date').textContent = dayjs(dateNode6).format('M/YYYY');
+                document.getElementById('day6-icon').textContent = iconNode6;
+                document.getElementById('day6-temp').textContent = "Temperature: " + temperatureNode6;
+                document.getElementById('day6-humid').textContent = "Humidity: " + humidtyNode6;
+                document.getElementById('day6-wind').textContent = "Wind: " + windNode6;
+                //Day 6 forecast section end-----------------
 
             })
         }
