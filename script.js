@@ -1,26 +1,22 @@
 
 //Household variables
 var date = dayjs().format();
-
-//current-day weather space node
+//today's....variables will be used in getWeatherCall()
+var todaysTemp = document.getElementById('todays-temp');
+var todaysWind = document.getElementById('todays-wind');
+var todaysHumid = document.getElementById('todays-humid');
+var todaysIcon = document.getElementById('todays-icon');
 var todaysDate = document.getElementById('todays-date');
-var todaysTemp = document.getElementById('todays-temp').textContent;
-var todaysWind = document.getElementById('todays-wind').textContent;
-var todaysHumid = document.getElementById('todays-humid').textContent;
-var todaysIcon = document.getElementById('todays-icon').textContent;
 todaysDate.append("Date: " + date)
-// console.log(todaysIcon)
 
 
 //Buttons =======================================================================
 var searchBtn = document.querySelector("#search-button");
 searchBtn.addEventListener('click', takeFormInput); 
 
+
 // ===== API section start ======================================================
-
 var weatherApiKey = "1dd8986d9e675512cead5440c0f34f1e";
-
-
 // ===== API section end =========================================================
 
 
@@ -49,6 +45,8 @@ fetch(weatherApiCall)
 
         var windNode = data.wind.speed;
         console.log("Wind: " + windNode)
+
+        todaysTemp.textContent= temperatureNode;
     })
 }
 
@@ -82,6 +80,7 @@ function getCityGeo(){
 } 
 
     getCityGeo()
+    
     saveSearchHistory() //function created a few lines below
 }
 
@@ -95,6 +94,51 @@ function saveSearchHistory() {
 }
 
 // ===== Search Button Section Start ======================================================
+
+//variable group for todays forecast
+// var todaysTemp = document.getElementById('todays-temp').textContent;
+// var todaysWind = document.getElementById('todays-wind').textContent;
+// var todaysHumid = document.getElementById('todays-humid').textContent;
+// var todaysIcon = document.getElementById('todays-icon').textContent;
+
+
+function todaysForcast(){
+
+    
+
+    // var weatherNode = data.weather;
+    // console.log(weatherNode)
+
+    // var iconNode = data.weather[0].icon;
+    // console.log("Icon: " + iconNode)
+
+    // var temperatureNode = data.main.temp;
+    // console.log("Temp: " + temperatureNode)
+
+    // var humidtyNode = data.main.humidity;
+    // console.log("Humidty: " + humidtyNode)
+
+    // var windNode = data.wind.speed;
+    // console.log("Wind: " + windNode)
+
+    todaysTemp.textContent(temperatureNode);
+    // todaysWind = today
+
+}
+
+
+
+// ===== Current Day Forecast Section Start ================================================
+
+
+
+
+
+
+// ===== Current Day Forecast Section Start ================================================
+
+
+
 
 
 
