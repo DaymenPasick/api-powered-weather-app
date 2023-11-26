@@ -68,7 +68,7 @@ function getForecastCall(lat, lon) {
             .then(function (data){
                 console.log(data.list);
 
-                //Day 2 forecast section ==============================
+                //Day 2 forecast section start-----------------
                 var weatherNode2 = data.list[11].weather;
                 console.log(weatherNode2)
                 var iconNode2 = data.list[11].weather[0].icon;
@@ -82,13 +82,64 @@ function getForecastCall(lat, lon) {
                 var dateNode2 = data.list[11].dt_txt;
                 console.log(dateNode2);
         
-
                 document.getElementById('day2-day').textContent = dayjs(dateNode2).format('dddd');
                 document.getElementById('day2-date').textContent = dayjs(dateNode2).format('M/YYYY');
                 document.getElementById('day2-icon').textContent = iconNode2;
                 document.getElementById('day2-temp').textContent = "Temperature: " + temperatureNode2;
-                document.getElementById('day2-humid').textContent = "Humidity: " + humidtyNode2
+                document.getElementById('day2-humid').textContent = "Humidity: " + humidtyNode2;
                 document.getElementById('day2-wind').textContent = "Wind: " + windNode2;
+                //Day 2 forecast section end-----------------
+
+
+
+
+                //Day 3  forecast section start-----------------
+                var weatherNode3 = data.list[19].weather;
+                console.log(weatherNode3)
+                var iconNode3 = data.list[19].weather[0].icon;
+                console.log("Icon: " + iconNode3)
+                var temperatureNode3 = data.list[19].main.temp;
+                console.log("Temp: " + temperatureNode3)
+                var humidtyNode3 = data.list[19].main.humidity;
+                console.log("Humidty: " + humidtyNode3)
+                var windNode3 = data.list[19].wind.speed;
+                console.log("Wind: " + windNode3)
+                var dateNode3 = data.list[19].dt_txt;
+                console.log(dateNode3);
+        
+                document.getElementById('day3-day').textContent = dayjs(dateNode3).format('dddd');
+                document.getElementById('day3-date').textContent = dayjs(dateNode3).format('M/YYYY');
+                document.getElementById('day3-icon').textContent = iconNode3;
+                document.getElementById('day3-temp').textContent = "Temperature: " + temperatureNode3;
+                document.getElementById('day3-humid').textContent = "Humidity: " + humidtyNode3;
+                document.getElementById('day3-wind').textContent = "Wind: " + windNode3;
+                //Day 3 forecast section end-----------------
+
+
+
+
+                //Day 4  forecast section start-----------------
+                var weatherNode3 = data.list[27].weather;
+                console.log(weatherNode3)
+                var iconNode3 = data.list[27].weather[0].icon;
+                console.log("Icon: " + iconNode3)
+                var temperatureNode3 = data.list[27].main.temp;
+                console.log("Temp: " + temperatureNode3)
+                var humidtyNode3 = data.list[27].main.humidity;
+                console.log("Humidty: " + humidtyNode3)
+                var windNode3 = data.list[27].wind.speed;
+                console.log("Wind: " + windNode3)
+                var dateNode3 = data.list[27].dt_txt;
+                console.log(dateNode3);
+        
+                document.getElementById('day3-day').textContent = dayjs(dateNode3).format('dddd');
+                document.getElementById('day3-date').textContent = dayjs(dateNode3).format('M/YYYY');
+                document.getElementById('day3-icon').textContent = iconNode3;
+                document.getElementById('day3-temp').textContent = "Temperature: " + temperatureNode3;
+                document.getElementById('day3-humid').textContent = "Humidity: " + humidtyNode3;
+                document.getElementById('day3-wind').textContent = "Wind: " + windNode3;
+                //Day 3 forecast section end-----------------
+
             })
         }
 
