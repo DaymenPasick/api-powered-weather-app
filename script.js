@@ -24,7 +24,7 @@ var weatherApiKey = "1dd8986d9e675512cead5440c0f34f1e";
 // ===== Search Button Section Start (Includes 2 API fetch requests)======================================================
 //will handle calls to openweatherApi, using getCityGeo() lat and long 
 function getWeatherCall(lat, lon) {
-var weatherApiCall = "https://api.openweathermap.org/data/2.5/weather?lat="+lat+"&lon="+lon+"&units=imperial&appid=" + weatherApiKey;
+var weatherApiCall = "https://api.openweathermap.org/data/2.5/forecast?lat="+lat+"&lon="+lon+"&units=imperial&appid=" + weatherApiKey;
 fetch(weatherApiCall)
     .then(function (response) {
         return response.json();
@@ -32,29 +32,29 @@ fetch(weatherApiCall)
     .then(function (data){
         console.log(data);
 
-        var weatherNode = data.weather;
-        console.log(weatherNode)
+        // var weatherNode = data.weather;
+        // console.log(weatherNode)
 
-        var iconNode = data.weather[0].icon;
-        console.log("Icon: " + iconNode)
+        // var iconNode = data.weather[0].icon;
+        // console.log("Icon: " + iconNode)
 
-        var temperatureNode = data.main.temp;
-        console.log("Temp: " + temperatureNode)
+        // var temperatureNode = data.main.temp;
+        // console.log("Temp: " + temperatureNode)
 
-        var humidtyNode = data.main.humidity;
-        console.log("Humidty: " + humidtyNode)
+        // var humidtyNode = data.main.humidity;
+        // console.log("Humidty: " + humidtyNode)
 
-        var windNode = data.wind.speed;
-        console.log("Wind: " + windNode)
+        // var windNode = data.wind.speed;
+        // console.log("Wind: " + windNode)
 
-        var todaysDayFormat = dayjs().format('dddd');
-        var todaysDateFormat = dayjs().format('M/YYYY');
-        todaysDay.textContent = todaysDayFormat;
-        todaysDate.textContent = todaysDateFormat;
-        todaysIcon.textContent = iconNode;
-        todaysTemp.textContent = "Temperature: " + temperatureNode;
-        todaysHumid.textContent = "Humidity: " + humidtyNode;
-        todaysWind.textContent = "Wind: " + windNode;
+        // var todaysDayFormat = dayjs().format('dddd');
+        // var todaysDateFormat = dayjs().format('M/YYYY');
+        // todaysDay.textContent = todaysDayFormat;
+        // todaysDate.textContent = todaysDateFormat;
+        // todaysIcon.textContent = iconNode;
+        // todaysTemp.textContent = "Temperature: " + temperatureNode;
+        // todaysHumid.textContent = "Humidity: " + humidtyNode;
+        // todaysWind.textContent = "Wind: " + windNode;
     })
 }
 
