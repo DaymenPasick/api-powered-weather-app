@@ -92,18 +92,19 @@ var weatherApiKey = "1dd8986d9e675512cead5440c0f34f1e";
 // ===== Search Button Section Start ======================================================
 
 
-var latForApi;
-var longForApi;
+
 
 //function will take city search into a variable
 function takeFormInput(event){
     event.preventDefault()
     var cityInput = document.getElementById('city-input').value;
     lastSearchedCity = cityInput;
-
+    var latForApi;
+    var longForApi; 
 
 
     //will handle calls to openweather geoAPI
+    
     var geoApiCall = "http://api.openweathermap.org/geo/1.0/direct?q="+cityInput+"&limit=1&appid=" + weatherApiKey;
     fetch(geoApiCall)
     .then(function (response) {
@@ -113,21 +114,20 @@ function takeFormInput(event){
         //to test api response
         // console.log(data);
 
+
         var cityName = data[0].name;
-        console.log("searched city: " + cityName)
+        console.log("searched city: " + cityName);
         var cityLong = data[0].lon;
-        console.log(cityName + " Longitude: " + cityLong)
+        console.log(cityName + " Longitude: " + cityLong);
         var cityLat = data[0].lat;
-        console.log(cityName + " Latitude : " + cityLat)
+        console.log(cityName + " Latitude : " + cityLat);
 
-        latForApi = cityLat;
-        longForApi = cityLong;
     })
-    
 
-    //var weatherApiCall = "https://api.openweathermap.org/data/2.5/weather?lat=35.00018151&lon=-80.8556287&appid="+weatherApiKey;
+
+    var weatherApiCall = "https://api.openweathermap.org/data/2.5/weather?lat=35.00018151&lon=-80.8556287&appid="+weatherApiKey;
     //will handle calls to openweatherApi and make node variables accordingly
-var weatherApiCall = "https://api.openweathermap.org/data/2.5/weather?lat=" + latForApi +"&lon=" + longForApi + "&appid=" + weatherApiKey;
+// var weatherApiCall = "https://api.openweathermap.org/data/2.5/weather?lat="+latForApi+"&lon="+longForApi+"&appid=" + weatherApiKey;
 fetch(weatherApiCall)
     .then(function (response) {
         return response.json();
@@ -141,7 +141,7 @@ fetch(weatherApiCall)
         console.log(weatherNode)
 
         var iconNode = data.weather[0].icon;
-        console.log(iconNode)
+        console.log("Icon: " + iconNode)
 
         var temperatureNode = data.main.temp;
         console.log("Temp: " + temperatureNode)
