@@ -89,7 +89,8 @@ function getForecastCall(lat, lon) {
                 document.getElementById('day2-city').textContent = cityNode;
                 document.getElementById('day2-day').textContent = dayjs(dateNode2).format('dddd');
                 document.getElementById('day2-date').textContent = dayjs(dateNode2).format('M/D/YYYY');
-                document.getElementById('day2-icon').textContent = iconNode2;
+                document.getElementById('day2-icon').setAttribute('src', 'http://openweathermap.org/img/w/'+iconNode2+'.png')
+                document.getElementById('day2-icon').setAttribute('alt', 'icon displaying the current weather')
                 document.getElementById('day2-temp').textContent = "Temperature: " + temperatureNode2;
                 document.getElementById('day2-humid').textContent = "Humidity: " + humidtyNode2;
                 document.getElementById('day2-wind').textContent = "Wind: " + windNode2 + "mph";
@@ -115,7 +116,8 @@ function getForecastCall(lat, lon) {
                 document.getElementById('day3-city').textContent = cityNode;
                 document.getElementById('day3-day').textContent = dayjs(dateNode3).format('dddd');
                 document.getElementById('day3-date').textContent = dayjs(dateNode3).format('M/D/YYYY');
-                document.getElementById('day3-icon').textContent = iconNode3;
+                document.getElementById('day3-icon').setAttribute('src', 'http://openweathermap.org/img/w/'+iconNode3+'.png')
+                document.getElementById('day3-icon').setAttribute('alt', 'icon displaying the current weather')
                 document.getElementById('day3-temp').textContent = "Temperature: " + temperatureNode3;
                 document.getElementById('day3-humid').textContent = "Humidity: " + humidtyNode3;
                 document.getElementById('day3-wind').textContent = "Wind: " + windNode3 + "mph";
@@ -141,7 +143,8 @@ function getForecastCall(lat, lon) {
                 document.getElementById('day4-city').textContent = cityNode;
                 document.getElementById('day4-day').textContent = dayjs(dateNode4).format('dddd');
                 document.getElementById('day4-date').textContent = dayjs(dateNode4).format('M/D/YYYY');
-                document.getElementById('day4-icon').textContent = iconNode4;
+                document.getElementById('day4-icon').setAttribute('src', 'http://openweathermap.org/img/w/'+iconNode4+'.png')
+                document.getElementById('day4-icon').setAttribute('alt', 'icon displaying the current weather')
                 document.getElementById('day4-temp').textContent = "Temperature: " + temperatureNode4;
                 document.getElementById('day4-humid').textContent = "Humidity: " + humidtyNode4;
                 document.getElementById('day4-wind').textContent = "Wind: " + windNode4 + "mph";
@@ -167,7 +170,8 @@ function getForecastCall(lat, lon) {
                 document.getElementById('day5-city').textContent = cityNode;
                 document.getElementById('day5-day').textContent = dayjs(dateNode5).format('dddd');
                 document.getElementById('day5-date').textContent = dayjs(dateNode5).format('M/D/YYYY');
-                document.getElementById('day5-icon').textContent = iconNode5;
+                document.getElementById('day5-icon').setAttribute('src', 'http://openweathermap.org/img/w/'+iconNode5+'.png')
+                document.getElementById('day5-icon').setAttribute('alt', 'icon displaying the current weather')
                 document.getElementById('day5-temp').textContent = "Temperature: " + temperatureNode5;
                 document.getElementById('day5-humid').textContent = "Humidity: " + humidtyNode5;
                 document.getElementById('day5-wind').textContent = "Wind: " + windNode5 + "mph";
@@ -193,8 +197,10 @@ function getForecastCall(lat, lon) {
                 document.getElementById('day6-city').textContent = cityNode;
                 document.getElementById('day6-day').textContent = dayjs(dateNode6).format('dddd');
                 document.getElementById('day6-date').textContent = dayjs(dateNode6).format('M/D/YYYY');
-                document.getElementById('day6-icon').textContent = iconNode6;
+                document.getElementById('day6-icon').setAttribute('src', 'http://openweathermap.org/img/w/'+iconNode6+'.png')
+                document.getElementById('day6-icon').setAttribute('alt', 'icon displaying the current weather')
                 document.getElementById('day6-temp').textContent = "Temperature: " + temperatureNode6;
+                document.getElementById('day6-humid').textContent = "Humidity: " + humidtyNode6;
                 document.getElementById('day6-wind').textContent = "Wind: " + windNode6 + "mph";
                 //Day 6 forecast section end-----------------
 
