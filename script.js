@@ -58,7 +58,8 @@ fetch(weatherApiCall)
     })
 }
 
-
+    //This section will handle printing content into 5-day forecast section 
+    //when user searches for a city
 function getForecastCall(lat, lon) {
         var forecastApiCall = "https://api.openweathermap.org/data/2.5/forecast?lat="+lat+"&lon="+lon+"&units=imperial&appid=" + weatherApiKey;
         fetch(forecastApiCall)
@@ -299,6 +300,16 @@ function searchHistoryGenerator(){
 searchHistoryGenerator();
 // ===== LocalStorage History Management End ======================================================
 
+
+var historyButtonContainer = document.querySelector('.history-button-container')
+
+
+
+function buttonHistorySearch() {
+
+    console.log("click")
+
+}
 
 
 
