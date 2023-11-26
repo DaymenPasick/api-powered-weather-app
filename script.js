@@ -167,17 +167,17 @@ function getForecastCall(lat, lon) {
 
 
                 //Day 6 forecast section start-----------------
-                var weatherNode6= data.list[40].weather;
+                var weatherNode6= data.list[39].weather;
                 console.log(weatherNode6)
-                var iconNode6 = data.list[40].weather[0].icon;
+                var iconNode6 = data.list[39].weather[0].icon;
                 console.log("Icon: " + iconNode6)
-                var temperatureNode6 = data.list[40].main.temp;
+                var temperatureNode6 = data.list[39].main.temp;
                 console.log("Temp: " + temperatureNode6)
-                var humidtyNode6 = data.list[40].main.humidity;
+                var humidtyNode6 = data.list[39].main.humidity;
                 console.log("Humidty: " + humidtyNode6)
-                var windNode6 = data.list[40].wind.speed;
+                var windNode6 = data.list[39].wind.speed;
                 console.log("Wind: " + windNode6)
-                var dateNode6 = data.list[40].dt_txt;
+                var dateNode6 = data.list[39].dt_txt;
                 console.log(dateNode6);
         
                 document.getElementById('day6-day').textContent = dayjs(dateNode6).format('dddd');
