@@ -12,7 +12,7 @@ todaysDate.append("Date: " + date)
 // console.log(todaysIcon)
 
 
-//Buttons
+//Buttons =======================================================================
 var searchBtn = document.querySelector("#search-button");
 searchBtn.addEventListener('click', takeFormInput); 
 
@@ -21,78 +21,12 @@ searchBtn.addEventListener('click', takeFormInput);
 var weatherApiKey = "1dd8986d9e675512cead5440c0f34f1e";
 
 
-//will handle calls to openweather geoAPI
-// var geoApiCall = "http://api.openweathermap.org/geo/1.0/direct?q=Sarasota&limit=1&appid=" + weatherApiKey;
-// fetch(geoApiCall)
-//     .then(function (response) {
-//         return response.json();
-//     })
-//     .then(function (data){
-//         console.log(data[0]);
-
-//         var cityName = data[0].name;
-//         console.log("searched city: " + cityName)
-//         var cityLong = data[0].lon;
-//         console.log(cityName + " Longitude: " + cityLong)
-//         var cityLat = data[0].lat;
-//         console.log(cityName + " Latitude : " + cityLat)
-//     })
+// ===== API section end =========================================================
 
 
-
-//will handle calls to openweatherApi and make node variables accordingly
-// var weatherApiCall = "https://api.openweathermap.org/data/2.5/weather?lat=35.00018151&lon=-80.8556287&appid="+weatherApiKey;
-// fetch(weatherApiCall)
-//     .then(function (response) {
-//         return response.json();
-//     })
-//     .then(function (data){
-//         console.log(data);
-
-        
-
-//         var weatherNode = data.weather;
-//         console.log(weatherNode)
-
-//         var iconNode = data.weather[0].icon;
-//         console.log(iconNode)
-
-//         var temperatureNode = data.main.temp;
-//         console.log("Temp: " + temperatureNode)
-
-//         var humidtyNode = data.main.humidity;
-//         console.log("Humidty: " + humidtyNode)
-
-//         var windNode = data.wind.speed;
-//         console.log("Wind: " + windNode)
-
-//     })
-
-
-
-
-
-
-
-
-// ===== API section end ======================================================
-
-
-
-
-
-
-
-
-
-
-
-
-
-// ===== Search Button Section Start ======================================================
-
+// ===== Search Button Section Start (Includes 2 API fetch requests)======================================================
+//will handle calls to openweatherApi, using getCityGeo() lat and long 
 function getWeatherCall(lat, lon) {
-    //will handle calls to openweatherApi and make node variables accordingly
 var weatherApiCall = "https://api.openweathermap.org/data/2.5/weather?lat="+lat+"&lon="+lon+"&units=imperial&appid=" + weatherApiKey;
 fetch(weatherApiCall)
     .then(function (response) {
@@ -115,9 +49,7 @@ fetch(weatherApiCall)
 
         var windNode = data.wind.speed;
         console.log("Wind: " + windNode)
-        
     })
-
 }
 
 
@@ -130,17 +62,14 @@ function takeFormInput(event){
     var longForApi; 
 
 
-    //will handle calls to openweather geoAPI
-    
+//will handle calls to openweather geoAPI and get lat and long
+function getCityGeo(){
     var geoApiCall = "http://api.openweathermap.org/geo/1.0/direct?q="+cityInput+"&limit=1&appid=" + weatherApiKey;
     fetch(geoApiCall)
     .then(function (response) {
         return response.json();
     })
     .then(function (data){
-        //to test api response
-        // console.log(data);
-
 
         var cityName = data[0].name;
         console.log("searched city: " + cityName);
@@ -149,17 +78,12 @@ function takeFormInput(event){
         var cityLat = data[0].lat;
         console.log(cityName + " Latitude : " + cityLat);
         getWeatherCall(cityLat, cityLong);
-
     })
+} 
 
-
-
-
-
-
-    saveSearchHistory()
+    getCityGeo()
+    saveSearchHistory() //function created a few lines below
 }
-
 
 //function that will save to local storage on click
 var lastSearchedCity = "";
@@ -171,6 +95,10 @@ function saveSearchHistory() {
 }
 
 // ===== Search Button Section Start ======================================================
+
+
+
+
 
 // ===== LocalStorage History Management Start ======================================================
 //function will retrieve city search history from local storage
@@ -186,7 +114,7 @@ historyGrab()
 //this variable created using local-storage object from historyGrab()
 var cityHistory = historyObject.city
 
-//function will sort through local storage search history
+//function will sort through local storage
 //and generate recently searched city buttons accordingly
 var searchHistoryParent = document.getElementById('search-history')
 
