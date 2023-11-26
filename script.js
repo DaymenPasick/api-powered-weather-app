@@ -11,7 +11,13 @@ var todaysDate = document.getElementById('todays-date');
 
 
 
-//Buttons =======================================================================
+//reset button to generate latest search history
+// var viewHistoryBtn = document.querySelector("#history-refresh");
+// viewHistoryBtn.addEventListener('click', viewHistoryBtn); 
+
+// function viewHistoryBtn(){
+//     location.reload()
+// }
 
 
 // ===== API Key ======================================================
