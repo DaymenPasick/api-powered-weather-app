@@ -54,4 +54,10 @@ main p {
     font-size: 15px;
 }
 
+
+.five-cast {
+    margin: 0 10px;
+    padding: 10px;
+}
+
 /* === Styling for forecast blocks end ========================== */
