@@ -91,7 +91,34 @@ var weatherApiKey = "1dd8986d9e675512cead5440c0f34f1e";
 
 // ===== Search Button Section Start ======================================================
 
+function getWeatherCall(lat, lon) {
+    //will handle calls to openweatherApi and make node variables accordingly
+var weatherApiCall = "https://api.openweathermap.org/data/2.5/weather?lat="+lat+"&lon="+lon+"&units=imperial&appid=" + weatherApiKey;
+fetch(weatherApiCall)
+    .then(function (response) {
+        return response.json();
+    })
+    .then(function (data){
+        console.log(data);
 
+        var weatherNode = data.weather;
+        console.log(weatherNode)
+
+        var iconNode = data.weather[0].icon;
+        console.log("Icon: " + iconNode)
+
+        var temperatureNode = data.main.temp;
+        console.log("Temp: " + temperatureNode)
+
+        var humidtyNode = data.main.humidity;
+        console.log("Humidty: " + humidtyNode)
+
+        var windNode = data.wind.speed;
+        console.log("Wind: " + windNode)
+        
+    })
+
+}
 
 
 //function will take city search into a variable
@@ -121,38 +148,12 @@ function takeFormInput(event){
         console.log(cityName + " Longitude: " + cityLong);
         var cityLat = data[0].lat;
         console.log(cityName + " Latitude : " + cityLat);
+        getWeatherCall(cityLat, cityLong);
 
     })
 
 
-    var weatherApiCall = "https://api.openweathermap.org/data/2.5/weather?lat=35.00018151&lon=-80.8556287&appid="+weatherApiKey;
-    //will handle calls to openweatherApi and make node variables accordingly
-// var weatherApiCall = "https://api.openweathermap.org/data/2.5/weather?lat="+latForApi+"&lon="+longForApi+"&appid=" + weatherApiKey;
-fetch(weatherApiCall)
-    .then(function (response) {
-        return response.json();
-    })
-    .then(function (data){
-        console.log(data);
 
-        
-
-        var weatherNode = data.weather;
-        console.log(weatherNode)
-
-        var iconNode = data.weather[0].icon;
-        console.log("Icon: " + iconNode)
-
-        var temperatureNode = data.main.temp;
-        console.log("Temp: " + temperatureNode)
-
-        var humidtyNode = data.main.humidity;
-        console.log("Humidty: " + humidtyNode)
-
-        var windNode = data.wind.speed;
-        console.log("Wind: " + windNode)
-        
-    })
 
 
 
