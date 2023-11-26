@@ -45,6 +45,7 @@ fetch(weatherApiCall)
         var windNode = data.wind.speed;
         console.log("Wind: " + windNode)
 
+        document.getElementById('todays-city').textContent = data.name;
         var todaysDayFormat = dayjs().format('dddd');
         var todaysDateFormat = dayjs().format('M/D/YYYY');
         todaysDay.textContent = todaysDayFormat;
@@ -65,9 +66,12 @@ function getForecastCall(lat, lon) {
                 return response.json();
             })
             .then(function (data){
-                console.log(data.list);
+                
+                console.log(data);
 
                 //Day 2 forecast section start-----------------
+                var cityNode = data.city.name;
+                console.log(cityNode)
                 var weatherNode2 = data.list[11].weather;
                 console.log(weatherNode2)
                 var iconNode2 = data.list[11].weather[0].icon;
@@ -81,6 +85,7 @@ function getForecastCall(lat, lon) {
                 var dateNode2 = data.list[11].dt_txt;
                 console.log(dateNode2);
         
+                document.getElementById('day2-city').textContent = cityNode;
                 document.getElementById('day2-day').textContent = dayjs(dateNode2).format('dddd');
                 document.getElementById('day2-date').textContent = dayjs(dateNode2).format('M/D/YYYY');
                 document.getElementById('day2-icon').textContent = iconNode2;
@@ -105,7 +110,8 @@ function getForecastCall(lat, lon) {
                 console.log("Wind: " + windNode3)
                 var dateNode3 = data.list[19].dt_txt;
                 console.log(dateNode3);
-        
+                
+                document.getElementById('day3-city').textContent = cityNode;
                 document.getElementById('day3-day').textContent = dayjs(dateNode3).format('dddd');
                 document.getElementById('day3-date').textContent = dayjs(dateNode3).format('M/D/YYYY');
                 document.getElementById('day3-icon').textContent = iconNode3;
@@ -130,7 +136,8 @@ function getForecastCall(lat, lon) {
                 console.log("Wind: " + windNode4)
                 var dateNode4 = data.list[27].dt_txt;
                 console.log(dateNode4);
-        
+                
+                document.getElementById('day4-city').textContent = cityNode;
                 document.getElementById('day4-day').textContent = dayjs(dateNode4).format('dddd');
                 document.getElementById('day4-date').textContent = dayjs(dateNode4).format('M/D/YYYY');
                 document.getElementById('day4-icon').textContent = iconNode4;
@@ -156,6 +163,7 @@ function getForecastCall(lat, lon) {
                 var dateNode5 = data.list[35].dt_txt;
                 console.log(dateNode5);
         
+                document.getElementById('day5-city').textContent = cityNode;
                 document.getElementById('day5-day').textContent = dayjs(dateNode5).format('dddd');
                 document.getElementById('day5-date').textContent = dayjs(dateNode5).format('M/D/YYYY');
                 document.getElementById('day5-icon').textContent = iconNode5;
@@ -178,7 +186,10 @@ function getForecastCall(lat, lon) {
                 console.log("Wind: " + windNode6)
                 var dateNode6 = data.list[39].dt_txt;
                 console.log(dateNode6);
-        
+                
+                // document.getElementById('search-city').textContent = forecastCity;
+                
+                document.getElementById('day6-city').textContent = cityNode;
                 document.getElementById('day6-day').textContent = dayjs(dateNode6).format('dddd');
                 document.getElementById('day6-date').textContent = dayjs(dateNode6).format('M/D/YYYY');
                 document.getElementById('day6-icon').textContent = iconNode6;
@@ -196,11 +207,13 @@ function getForecastCall(lat, lon) {
 //function will take city search into a variable
 var searchBtn = document.querySelector("#search-button");
 searchBtn.addEventListener('click', takeFormInput); 
+var forecastCity;
 
 function takeFormInput(event){
     event.preventDefault()
     var cityInput = document.getElementById('city-input').value;
     lastSearchedCity = cityInput;
+    forecastCity = cityInput
 
 
 //will handle calls to openweather geoAPI and get lat and long
