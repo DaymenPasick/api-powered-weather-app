@@ -7,17 +7,32 @@
 
 }
 
+body {
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
 
+header {
+    background-color: rgb(54, 54, 178);
+
+}
+
+header h1{
+    font-weight:900;
+}
 
 
 
 
 /* === nav/search section start ==================================== */
-form .search-bar {
-
+nav h2 {
+    font-weight: bold;
 }
 
-
+#history-refresh {
+    background-color: rgb(104, 160, 200);
+    padding: 2px 10px;
+    font-weight: bold;
+}
 
 /* sear history */
 .history-button {
@@ -25,6 +40,7 @@ form .search-bar {
     background-color: var(--button-color);
     border: solid 5px var(--theme-color);
     margin:30px 0px;
+    font-weight: bold;
 
 }
 /* === nav/search section end ==================================== */
@@ -33,5 +49,9 @@ form .search-bar {
 
 /* === Styling for forecast blocks start ========================== */
 
+main p {
+    font-weight: bold;
+    font-size: 15px;
+}
 
 /* === Styling for forecast blocks end ========================== */

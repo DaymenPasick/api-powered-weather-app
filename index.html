@@ -58,7 +58,7 @@
                     </div> 
                     
                     <div class="d-flex justify-content-center">
-                        <button id="history-refresh" class="text-light">View Latest Seaerch History</button>
+                        <button id="history-refresh" class="text-light">View Latest Search History</button>
                     </div>
 
                     <div id="search-history" class="history-button-container 
@@ -72,14 +72,14 @@
                 </nav>
 
 
-            <div class="d-flex container col-sm-6 col-md-9 col-lg-6">
+            <div class="d-flex container-fluid col-md-9 col-lg-6">
                 <main class="d-flex flex-column justify-content-evenly">
 
                    
 
                 <!-- Section for today's forcasted weather -->
                     <section id="today-forecast" class="container-fluid d-flex justify-content-center">
-                        <div class="border border-5 border-primary text-center bg-light">
+                        <div class="d-flex flex-column border border-5 border-primary text-center bg-light justify-content-center">
                             <p id="todays-city"></p>
 
                             <p id="todays-day"></p>
@@ -96,11 +96,12 @@
                 <!-- Section for 5-day forcast -->
                     <section id="5day-forecast" class="container-fluid d-flex five-day-container justify-content-between">
                         <!-- These will store data for each future day in the 5-day forecast -->
-                            <div id="day-2" class="future-forecast border border-5 border-primary bg-light">
-                                <p id="day2-city"></p>
-                                <p id="day2-icon" class="icon-toggle text-center fs-1"></p>
+                            <div id="day-2" class="d-flex future-forecast border border-5 border-primary bg-light">
+                                
 
-                                <div class="fw-bold">
+                                <div class="d-flex flex-column justify-content-center">
+                                    <p id="day2-city"></p>
+                                <p id="day2-icon" class="icon-toggle text-center fs-1"></p>
                                     <p id="day2-day"></p>
                                     <p id="day2-date"></p>
                                     <p id="day2-temp"></p>
@@ -109,11 +110,11 @@
                                 </div>
                             </div>
 
-                            <div id="day-3" class=" future-forecast border border-5 border-primary bg-light">
-                                <p id="day3-city"></p>
-                                <p id="day3-icon" class="icon-toggle text-center fs-1"></p>
+                            <div id="day-3" class="d-flex future-forecast border border-5 border-primary bg-light">
 
-                                <div class="fw-bold">
+                                <div class="d-flex flex-column justify-content-center ">
+                                    <p id="day3-city"></p>
+                                <p id="day3-icon" class="icon-toggle text-center fs-1"></p>
                                     <p id="day3-day"></p>
                                     <p id="day3-date"></p>
                                     <p id="day3-temp"></p>
@@ -122,11 +123,12 @@
                                 </div>
                             </div>
 
-                            <div id="day-4" class=" future-forecast border border-5 border-primary bg-light ">
-                                <p id="day4-city"></p>
-                                <p id="day4-icon" class="icon-toggle text-center fs-1"></p>
+                            <div id="day-4" class="d-flex  future-forecast border border-5 border-primary bg-light ">
+                                
 
-                                <div class="fw-bold">
+                                <div class="d-flex flex-column justify-content-center ">
+                                    <p id="day4-city"></p>
+                                <p id="day4-icon" class="icon-toggle text-center fs-1"></p>
                                     <p id="day4-day"></p>
                                     <p id="day4-date"></p>
                                     <p id="day4-temp"></p>
@@ -135,11 +137,12 @@
                                 </div>
                             </div>
                                 
-                            <div id="day-5" class=" future-forecast border border-5 border-primary bg-light ">
-                                <p id="day5-city"></p>
-                                <p id="day5-icon" class="icon-toggle text-center fs-1"></p>
+                            <div id="day-5" class="d-flex  future-forecast border border-5 border-primary bg-light ">
+                                
 
-                                <div class="fw-bold">
+                                <div class="d-flex flex-column justify-content-center ">
+                                    <p id="day5-city"></p>
+                                <p id="day5-icon" class="icon-toggle text-center fs-1"></p>
                                     <p id="day5-day"></p>
                                     <p id="day5-date"></p>
                                     <p id="day5-temp"></p>
@@ -148,11 +151,12 @@
                                 </div>
                             </div>
 
-                            <div id="day-6" class="future-forecast border border-5 border-primary bg-light ">
-                                <p id="day6-city"></p>
-                                <p id="day6-icon" class="icon-toggle text-center fs-1"></p>
+                            <div id="day-6" class="d-flex future-forecast border border-5 border-primary bg-light ">
+                               
 
-                                <div class="fw-bold">
+                                <div class="d-flex mx-2 flex-column justify-content-center ">
+                                    <p id="day6-city"></p>
+                                    <p id="day6-icon" class="icon-toggle text-center fs-1"></p>
                                     <p id="day6-day"></p>
                                     <p id="day6-date"></p>
                                     <p id="day6-temp"></p>
