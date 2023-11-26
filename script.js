@@ -301,8 +301,10 @@ searchHistoryGenerator();
 // ===== LocalStorage History Management End ======================================================
 
 
-var historyButtonContainer = document.querySelector('.history-button-container')
-
+var historyButtons= document.querySelectorAll('.history-button')
+historyButtons.forEach(function(currentButton){
+    currentButton.addEventListener('click', buttonHistorySearch)
+})
 
 
 function buttonHistorySearch() {
