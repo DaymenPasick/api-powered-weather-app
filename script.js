@@ -140,6 +140,31 @@ function getForecastCall(lat, lon) {
                 document.getElementById('day4-wind').textContent = "Wind: " + windNode4;
                 //Day 4 forecast section end-----------------
 
+
+
+
+                //Day 5 forecast section start-----------------
+                var weatherNode5= data.list[35].weather;
+                console.log(weatherNode5)
+                var iconNode5 = data.list[35].weather[0].icon;
+                console.log("Icon: " + iconNode5)
+                var temperatureNode5 = data.list[35].main.temp;
+                console.log("Temp: " + temperatureNode5)
+                var humidtyNode5 = data.list[35].main.humidity;
+                console.log("Humidty: " + humidtyNode5)
+                var windNode5 = data.list[35].wind.speed;
+                console.log("Wind: " + windNode5)
+                var dateNode5 = data.list[35].dt_txt;
+                console.log(dateNode5);
+        
+                document.getElementById('day5-day').textContent = dayjs(dateNode5).format('dddd');
+                document.getElementById('day5-date').textContent = dayjs(dateNode5).format('M/YYYY');
+                document.getElementById('day5-icon').textContent = iconNode4;
+                document.getElementById('day5-temp').textContent = "Temperature: " + temperatureNode5;
+                document.getElementById('day5-humid').textContent = "Humidity: " + humidtyNode5;
+                document.getElementById('day5-wind').textContent = "Wind: " + windNode5;
+                //Day 5 forecast section end-----------------
+
             })
         }
 
