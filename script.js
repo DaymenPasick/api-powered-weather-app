@@ -306,10 +306,12 @@ historyButtons.forEach(function(currentButton){
     currentButton.addEventListener('click', buttonHistorySearch)
 })
 
-
 function buttonHistorySearch() {
+    var historyButtonCity;
+    
 
-    console.log("click")
+    historyButtonCity = this.textContent
+    console.log(historyButtonCity)
 
 }
 
