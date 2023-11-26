@@ -53,7 +53,7 @@ fetch(weatherApiCall)
         todaysIcon.textContent = iconNode;
         todaysTemp.textContent = "Temperature: " + temperatureNode;
         todaysHumid.textContent = "Humidity: " + humidtyNode;
-        todaysWind.textContent = "Wind: " + windNode;
+        todaysWind.textContent = "Wind: " + windNode + "mph";
     })
 }
 
@@ -91,7 +91,7 @@ function getForecastCall(lat, lon) {
                 document.getElementById('day2-icon').textContent = iconNode2;
                 document.getElementById('day2-temp').textContent = "Temperature: " + temperatureNode2;
                 document.getElementById('day2-humid').textContent = "Humidity: " + humidtyNode2;
-                document.getElementById('day2-wind').textContent = "Wind: " + windNode2;
+                document.getElementById('day2-wind').textContent = "Wind: " + windNode2 + "mph";
                 //Day 2 forecast section end-----------------
 
 
@@ -117,7 +117,7 @@ function getForecastCall(lat, lon) {
                 document.getElementById('day3-icon').textContent = iconNode3;
                 document.getElementById('day3-temp').textContent = "Temperature: " + temperatureNode3;
                 document.getElementById('day3-humid').textContent = "Humidity: " + humidtyNode3;
-                document.getElementById('day3-wind').textContent = "Wind: " + windNode3;
+                document.getElementById('day3-wind').textContent = "Wind: " + windNode3 + "mph";
                 //Day 3 forecast section end-----------------
 
 
@@ -143,7 +143,7 @@ function getForecastCall(lat, lon) {
                 document.getElementById('day4-icon').textContent = iconNode4;
                 document.getElementById('day4-temp').textContent = "Temperature: " + temperatureNode4;
                 document.getElementById('day4-humid').textContent = "Humidity: " + humidtyNode4;
-                document.getElementById('day4-wind').textContent = "Wind: " + windNode4;
+                document.getElementById('day4-wind').textContent = "Wind: " + windNode4 + "mph";
                 //Day 4 forecast section end-----------------
 
 
@@ -169,7 +169,7 @@ function getForecastCall(lat, lon) {
                 document.getElementById('day5-icon').textContent = iconNode5;
                 document.getElementById('day5-temp').textContent = "Temperature: " + temperatureNode5;
                 document.getElementById('day5-humid').textContent = "Humidity: " + humidtyNode5;
-                document.getElementById('day5-wind').textContent = "Wind: " + windNode5;
+                document.getElementById('day5-wind').textContent = "Wind: " + windNode5 + "mph";
                 //Day 5 forecast section end-----------------
 
 
@@ -194,8 +194,7 @@ function getForecastCall(lat, lon) {
                 document.getElementById('day6-date').textContent = dayjs(dateNode6).format('M/D/YYYY');
                 document.getElementById('day6-icon').textContent = iconNode6;
                 document.getElementById('day6-temp').textContent = "Temperature: " + temperatureNode6;
-                document.getElementById('day6-humid').textContent = "Humidity: " + humidtyNode6;
-                document.getElementById('day6-wind').textContent = "Wind: " + windNode6;
+                document.getElementById('day6-wind').textContent = "Wind: " + windNode6 + "mph";
                 //Day 6 forecast section end-----------------
 
             })
