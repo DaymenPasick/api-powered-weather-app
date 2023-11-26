@@ -12,13 +12,11 @@ var todaysDate = document.getElementById('todays-date');
 
 
 //Buttons =======================================================================
-var searchBtn = document.querySelector("#search-button");
-searchBtn.addEventListener('click', takeFormInput); 
 
 
-// ===== API section start ======================================================
+// ===== API Key ======================================================
 var weatherApiKey = "1dd8986d9e675512cead5440c0f34f1e";
-// ===== API section end =========================================================
+// ===== API Key =========================================================
 
 
 // ===== Search Button Section Start (Includes 2 API fetch requests)======================================================
@@ -48,7 +46,7 @@ fetch(weatherApiCall)
         console.log("Wind: " + windNode)
 
         var todaysDayFormat = dayjs().format('dddd');
-        var todaysDateFormat = dayjs().format('M/YYYY');
+        var todaysDateFormat = dayjs().format('M/D/YYYY');
         todaysDay.textContent = todaysDayFormat;
         todaysDate.textContent = todaysDateFormat;
         todaysIcon.textContent = iconNode;
@@ -84,7 +82,7 @@ function getForecastCall(lat, lon) {
                 console.log(dateNode2);
         
                 document.getElementById('day2-day').textContent = dayjs(dateNode2).format('dddd');
-                document.getElementById('day2-date').textContent = dayjs(dateNode2).format('M/YYYY');
+                document.getElementById('day2-date').textContent = dayjs(dateNode2).format('M/D/YYYY');
                 document.getElementById('day2-icon').textContent = iconNode2;
                 document.getElementById('day2-temp').textContent = "Temperature: " + temperatureNode2;
                 document.getElementById('day2-humid').textContent = "Humidity: " + humidtyNode2;
@@ -109,7 +107,7 @@ function getForecastCall(lat, lon) {
                 console.log(dateNode3);
         
                 document.getElementById('day3-day').textContent = dayjs(dateNode3).format('dddd');
-                document.getElementById('day3-date').textContent = dayjs(dateNode3).format('M/YYYY');
+                document.getElementById('day3-date').textContent = dayjs(dateNode3).format('M/D/YYYY');
                 document.getElementById('day3-icon').textContent = iconNode3;
                 document.getElementById('day3-temp').textContent = "Temperature: " + temperatureNode3;
                 document.getElementById('day3-humid').textContent = "Humidity: " + humidtyNode3;
@@ -134,7 +132,7 @@ function getForecastCall(lat, lon) {
                 console.log(dateNode4);
         
                 document.getElementById('day4-day').textContent = dayjs(dateNode4).format('dddd');
-                document.getElementById('day4-date').textContent = dayjs(dateNode4).format('M/YYYY');
+                document.getElementById('day4-date').textContent = dayjs(dateNode4).format('M/D/YYYY');
                 document.getElementById('day4-icon').textContent = iconNode4;
                 document.getElementById('day4-temp').textContent = "Temperature: " + temperatureNode4;
                 document.getElementById('day4-humid').textContent = "Humidity: " + humidtyNode4;
@@ -159,7 +157,7 @@ function getForecastCall(lat, lon) {
                 console.log(dateNode5);
         
                 document.getElementById('day5-day').textContent = dayjs(dateNode5).format('dddd');
-                document.getElementById('day5-date').textContent = dayjs(dateNode5).format('M/YYYY');
+                document.getElementById('day5-date').textContent = dayjs(dateNode5).format('M/D/YYYY');
                 document.getElementById('day5-icon').textContent = iconNode5;
                 document.getElementById('day5-temp').textContent = "Temperature: " + temperatureNode5;
                 document.getElementById('day5-humid').textContent = "Humidity: " + humidtyNode5;
@@ -182,7 +180,7 @@ function getForecastCall(lat, lon) {
                 console.log(dateNode6);
         
                 document.getElementById('day6-day').textContent = dayjs(dateNode6).format('dddd');
-                document.getElementById('day6-date').textContent = dayjs(dateNode6).format('M/YYYY');
+                document.getElementById('day6-date').textContent = dayjs(dateNode6).format('M/D/YYYY');
                 document.getElementById('day6-icon').textContent = iconNode6;
                 document.getElementById('day6-temp').textContent = "Temperature: " + temperatureNode6;
                 document.getElementById('day6-humid').textContent = "Humidity: " + humidtyNode6;
@@ -196,12 +194,13 @@ function getForecastCall(lat, lon) {
 
 
 //function will take city search into a variable
+var searchBtn = document.querySelector("#search-button");
+searchBtn.addEventListener('click', takeFormInput); 
+
 function takeFormInput(event){
     event.preventDefault()
     var cityInput = document.getElementById('city-input').value;
     lastSearchedCity = cityInput;
-    var latForApi;
-    var longForApi; 
 
 
 //will handle calls to openweather geoAPI and get lat and long
@@ -235,7 +234,6 @@ function saveSearchHistory() {
   historyObject.city.push(lastSearchedCity)
   localStorage.setItem("history", JSON.stringify(historyObject))
 }
-
 // ===== Search Button Section Start ======================================================
 
 
@@ -295,21 +293,24 @@ function searchHistoryGenerator(){
             
             return limitBoolean;
         }
-
 }
 searchHistoryGenerator();
 // ===== LocalStorage History Management End ======================================================
 
 
+
+
+//===== Functional History Buttons Start ======================================================
+//functionality that will add click events to each history button
 var historyButtons= document.querySelectorAll('.history-button')
 historyButtons.forEach(function(currentButton){
     currentButton.addEventListener('click', buttonHistorySearch)
 })
-
+//function will take in clicked history button info and manipulate it
 function buttonHistorySearch() {
     var historyButtonCity;
     
-
+    //sets history button's text content into a variable
     historyButtonCity = this.textContent
     console.log(historyButtonCity)
 
@@ -331,7 +332,7 @@ function buttonHistorySearch() {
     })
 
 }
-
+//===== Functional History Buttons End ======================================================
 
 
 
