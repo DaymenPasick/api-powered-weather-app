@@ -10,16 +10,6 @@ var todaysDay = document.getElementById('todays-day');
 var todaysDate = document.getElementById('todays-date');
 
 
-
-//reset button to generate latest search history
-// var viewHistoryBtn = document.querySelector("#history-refresh");
-// viewHistoryBtn.addEventListener('click', viewHistoryBtn); 
-
-// function viewHistoryBtn(){
-//     location.reload()
-// }
-
-
 // ===== API Key ======================================================
 var weatherApiKey = "1dd8986d9e675512cead5440c0f34f1e";
 // ===== API Key =========================================================
