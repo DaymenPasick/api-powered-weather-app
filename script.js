@@ -119,26 +119,26 @@ function getForecastCall(lat, lon) {
 
 
                 //Day 4  forecast section start-----------------
-                var weatherNode3 = data.list[27].weather;
-                console.log(weatherNode3)
-                var iconNode3 = data.list[27].weather[0].icon;
-                console.log("Icon: " + iconNode3)
-                var temperatureNode3 = data.list[27].main.temp;
-                console.log("Temp: " + temperatureNode3)
-                var humidtyNode3 = data.list[27].main.humidity;
-                console.log("Humidty: " + humidtyNode3)
-                var windNode3 = data.list[27].wind.speed;
-                console.log("Wind: " + windNode3)
-                var dateNode3 = data.list[27].dt_txt;
-                console.log(dateNode3);
+                var weatherNode4 = data.list[27].weather;
+                console.log(weatherNode4)
+                var iconNode4 = data.list[27].weather[0].icon;
+                console.log("Icon: " + iconNode4)
+                var temperatureNode4 = data.list[27].main.temp;
+                console.log("Temp: " + temperatureNode4)
+                var humidtyNode4 = data.list[27].main.humidity;
+                console.log("Humidty: " + humidtyNode4)
+                var windNode4 = data.list[27].wind.speed;
+                console.log("Wind: " + windNode4)
+                var dateNode4 = data.list[27].dt_txt;
+                console.log(dateNode4);
         
-                document.getElementById('day3-day').textContent = dayjs(dateNode3).format('dddd');
-                document.getElementById('day3-date').textContent = dayjs(dateNode3).format('M/YYYY');
-                document.getElementById('day3-icon').textContent = iconNode3;
-                document.getElementById('day3-temp').textContent = "Temperature: " + temperatureNode3;
-                document.getElementById('day3-humid').textContent = "Humidity: " + humidtyNode3;
-                document.getElementById('day3-wind').textContent = "Wind: " + windNode3;
-                //Day 3 forecast section end-----------------
+                document.getElementById('day4-day').textContent = dayjs(dateNode4).format('dddd');
+                document.getElementById('day4-date').textContent = dayjs(dateNode4).format('M/YYYY');
+                document.getElementById('day4-icon').textContent = iconNode4;
+                document.getElementById('day4-temp').textContent = "Temperature: " + temperatureNode4;
+                document.getElementById('day4-humid').textContent = "Humidity: " + humidtyNode4;
+                document.getElementById('day4-wind').textContent = "Wind: " + windNode4;
+                //Day 4 forecast section end-----------------
 
             })
         }
