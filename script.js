@@ -313,6 +313,23 @@ function buttonHistorySearch() {
     historyButtonCity = this.textContent
     console.log(historyButtonCity)
 
+    var geoApiCall = "http://api.openweathermap.org/geo/1.0/direct?q="+historyButtonCity+"&limit=1&appid=" + weatherApiKey;
+    fetch(geoApiCall)
+    .then(function (response) {
+        return response.json();
+    })
+    .then(function (data){
+
+        var cityName = data[0].name;
+        console.log("searched city: " + cityName);
+        var cityLong = data[0].lon;
+        console.log(cityName + " Longitude: " + cityLong);
+        var cityLat = data[0].lat;
+        console.log(cityName + " Latitude : " + cityLat);
+        getWeatherCall(cityLat, cityLong);
+        getForecastCall(cityLat, cityLong);
+    })
+
 }
 
 
