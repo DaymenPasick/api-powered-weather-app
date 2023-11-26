@@ -68,31 +68,26 @@ function getForecastCall(lat, lon) {
             .then(function (data){
                 console.log(data.list[3]);
 
-                //Day 2 forecast start ==============================
-        
+                //Day 2 forecast section ==============================
                 var weatherNode2 = data.list[3].weather;
                 console.log(weatherNode2)
-        
-                var iconNode = data.weather[0].icon;
-                console.log("Icon: " + iconNode)
-        
-                // var temperatureNode = data.main.temp;
-                // console.log("Temp: " + temperatureNode)
-        
-                // var humidtyNode = data.main.humidity;
-                // console.log("Humidty: " + humidtyNode)
-        
-                // var windNode = data.wind.speed;
-                // console.log("Wind: " + windNode)
+                var iconNode2 = data.list[3].weather[0].icon;
+                console.log("Icon: " + iconNode2)
+                var temperatureNode2 = data.list[3].main.temp;
+                console.log("Temp: " + temperatureNode2)
+                var humidtyNode2 = data.list[3].main.humidity;
+                console.log("Humidty: " + humidtyNode2)
+                var windNode2 = data.list[3].wind.speed;
+                console.log("Wind: " + windNode2)
         
                 // var todaysDayFormat = dayjs().format('dddd');
                 // var todaysDateFormat = dayjs().format('M/YYYY');
                 // todaysDay.textContent = todaysDayFormat;
                 // todaysDate.textContent = todaysDateFormat;
-                // todaysIcon.textContent = iconNode;
-                // todaysTemp.textContent = "Temperature: " + temperatureNode;
-                // todaysHumid.textContent = "Humidity: " + humidtyNode;
-                // todaysWind.textContent = "Wind: " + windNode;
+                document.getElementById('day1-icon').textContent = iconNode2;
+                document.getElementById('day1-temp').textContent = "Temperature: " + temperatureNode2;
+                document.getElementById('day1-humid').textContent = "Humidity: " + humidtyNode2
+                document.getElementById('day1-wind').textContent = "Wind: " + windNode2;
             })
         }
 
