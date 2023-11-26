@@ -66,13 +66,15 @@ function getForecastCall(lat, lon) {
                 return response.json();
             })
             .then(function (data){
-                console.log(data);
+                console.log(data.list[3]);
+
+                //Day 2 forecast start ==============================
         
-                // var weatherNode = data.weather;
-                // console.log(weatherNode)
+                var weatherNode2 = data.list[3].weather;
+                console.log(weatherNode2)
         
-                // var iconNode = data.weather[0].icon;
-                // console.log("Icon: " + iconNode)
+                var iconNode = data.weather[0].icon;
+                console.log("Icon: " + iconNode)
         
                 // var temperatureNode = data.main.temp;
                 // console.log("Temp: " + temperatureNode)
@@ -125,9 +127,7 @@ function getCityGeo(){
         getForecastCall(cityLat, cityLong);
     })
 } 
-
     getCityGeo()
-    
     saveSearchHistory() //function created a few lines below
 }
 
@@ -141,53 +141,6 @@ function saveSearchHistory() {
 }
 
 // ===== Search Button Section Start ======================================================
-
-//variable group for todays forecast
-// var todaysTemp = document.getElementById('todays-temp').textContent;
-// var todaysWind = document.getElementById('todays-wind').textContent;
-// var todaysHumid = document.getElementById('todays-humid').textContent;
-// var todaysIcon = document.getElementById('todays-icon').textContent;
-
-
-function todaysForcast(){
-
-    
-
-    // var weatherNode = data.weather;
-    // console.log(weatherNode)
-
-    // var iconNode = data.weather[0].icon;
-    // console.log("Icon: " + iconNode)
-
-    // var temperatureNode = data.main.temp;
-    // console.log("Temp: " + temperatureNode)
-
-    // var humidtyNode = data.main.humidity;
-    // console.log("Humidty: " + humidtyNode)
-
-    // var windNode = data.wind.speed;
-    // console.log("Wind: " + windNode)
-
-    todaysTemp.textContent(temperatureNode);
-    // todaysWind = today
-
-}
-
-
-
-// ===== Current Day Forecast Section Start ================================================
-
-
-
-
-
-
-// ===== Current Day Forecast Section Start ================================================
-
-
-
-
-
 
 
 
