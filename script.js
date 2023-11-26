@@ -6,8 +6,9 @@ var todaysTemp = document.getElementById('todays-temp');
 var todaysWind = document.getElementById('todays-wind');
 var todaysHumid = document.getElementById('todays-humid');
 var todaysIcon = document.getElementById('todays-icon');
+var todaysDay = document.getElementById('todays-day');
 var todaysDate = document.getElementById('todays-date');
-todaysDate.append("Date: " + date)
+
 
 
 //Buttons =======================================================================
@@ -46,7 +47,14 @@ fetch(weatherApiCall)
         var windNode = data.wind.speed;
         console.log("Wind: " + windNode)
 
-        todaysTemp.textContent= temperatureNode;
+        var todaysDayFormat = dayjs().format('dddd');
+        var todaysDateFormat = dayjs().format('M/YYYY');
+        todaysDay.textContent = todaysDayFormat;
+        todaysDate.textContent = todaysDateFormat;
+        todaysIcon.textContent = iconNode;
+        todaysTemp.textContent = "Temperature: " + temperatureNode;
+        todaysHumid.textContent = "Humidity: " + humidtyNode;
+        todaysWind.textContent = "Wind: " + windNode;
     })
 }
 
