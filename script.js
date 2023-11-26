@@ -34,7 +34,7 @@ fetch(weatherApiCall)
         console.log(weatherNode)
 
         var iconNode = data.weather[0].icon;
-        console.log("Icon: " + iconNode)
+        // console.log("Icon: " + iconNode)
 
         var temperatureNode = data.main.temp;
         console.log("Temp: " + temperatureNode)
@@ -50,7 +50,7 @@ fetch(weatherApiCall)
         var todaysDateFormat = dayjs().format('M/D/YYYY');
         todaysDay.textContent = todaysDayFormat;
         todaysDate.textContent = todaysDateFormat;
-        todaysIcon.textContent = iconNode;
+        // todaysIcon.textContent = iconNode;
         todaysTemp.textContent = "Temperature: " + temperatureNode;
         todaysHumid.textContent = "Humidity: " + humidtyNode;
         todaysWind.textContent = "Wind: " + windNode + "mph";
