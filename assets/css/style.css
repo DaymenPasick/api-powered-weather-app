@@ -61,3 +61,10 @@ main p {
 }
 
 /* === Styling for forecast blocks end ========================== */
+
+
+#todays-icon {
+   height: auto;
+   width: 100%;
+
+}
