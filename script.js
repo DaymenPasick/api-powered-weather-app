@@ -50,8 +50,8 @@ fetch(weatherApiCall)
         var todaysDateFormat = dayjs().format('M/D/YYYY');
         todaysDay.textContent = todaysDayFormat;
         todaysDate.textContent = todaysDateFormat;
-        // todaysIcon.textContent = iconNode;
-        todaysIcon.setAttribute('src', 'http://openweathermap.org/img/w/02n.png')
+        todaysIcon.setAttribute('src', 'http://openweathermap.org/img/w/'+iconNode+'.png')
+        todaysIcon.setAttribute('alt', 'icon displaying the current weather')
         todaysTemp.textContent = "Temperature: " + temperatureNode;
         todaysHumid.textContent = "Humidity: " + humidtyNode;
         todaysWind.textContent = "Wind: " + windNode + "mph";
