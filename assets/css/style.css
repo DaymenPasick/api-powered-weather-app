@@ -63,8 +63,9 @@ main p {
 /* === Styling for forecast blocks end ========================== */
 
 
-#todays-icon {
-   height: auto;
-   width: 100%;
+.icon-class {
+   height: 20%;
+   margin: 0 25px;
+   width: auto;
 
 }
