@@ -51,6 +51,7 @@ fetch(weatherApiCall)
         todaysDay.textContent = todaysDayFormat;
         todaysDate.textContent = todaysDateFormat;
         // todaysIcon.textContent = iconNode;
+        todaysIcon.setAttribute('src', 'http://openweathermap.org/img/w/02n.png')
         todaysTemp.textContent = "Temperature: " + temperatureNode;
         todaysHumid.textContent = "Humidity: " + humidtyNode;
         todaysWind.textContent = "Wind: " + windNode + "mph";
