@@ -24,21 +24,25 @@
 
 
 <body class="bg-black">
-
+    <!-- Weather Dashboard H1 Bar -->
     <div class="border-bottom border-5 border-warning">
         <header id="header" class="d-flex container-fluid justify-content-end">
             <h1 class="text-light me-5 py-2">Weather Dashboard</h1>     
         </header>
     </div>     
 
+    <!-- Nav Section -->
     <div id="nav-div" class="container-fluid d-flex border-end">
       <div class="container-fluid col-sm-3 col-md-3 col-lg-3">
         <nav class="vh-100">
-            <div class="d-flex justify-content-center flex-column "> 
+            <div class="d-flex justify-content-center flex-column ">
+
+                <!-- H2 Search For City -->
                 <div class="d-flex justify-content-center mt-5">
                     <h2 class="text-light">Search For City</h2>
                 </div>
 
+                <!-- City Search Form -->
                 <div class="d-flex flex-row justify-content-center">
                     <form id="search-bar" class="">
                         <label for="City"></label>
@@ -49,6 +53,7 @@
                     </form>
                 </div> 
              
+                <!-- View History Button -->
                 <div class="d-flex justify-content-center my-5">
                     <button id="history-refresh" onclick="window.location.reload()" 
                     class="text-light border-warning">View Latest Search History</button>
