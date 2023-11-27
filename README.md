@@ -14,11 +14,11 @@
 
  - Image Of App With Forecasts
 
-![completed product website screenshot](./assets/imgs/Work-Day-Scheduler-events.png)
+![completed product website screenshot](./assets/imgs/WeatherAppActive.png)
 
 ## Usage
 
-Here is the link to the live quiz website: 
+Here is the link to the live weather app: 
 https://daymenpasick.github.io/student-workday-scheduler/
 
 
