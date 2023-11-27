@@ -65,15 +65,15 @@
                 
                 </div>
              <!-- Space for JavaScript generated history buttons -->
-           </div>  
+            </div>  
         </nav>
-     </div>
-    
+      </div>
+      
 
 
 
             <!-- Container for Main -->
-    <div id="main-div" class=" container d-flex flex-column 
+      <div id="main-div" class=" container d-flex flex-column 
             justify-content-evenly col-sm-9 col-md-9 col-lg-9">  
             
         
@@ -87,75 +87,66 @@
                 
 
                 <!-- Section for today's forcasted weather -->
-                    <section id="today-forecast" class="d-flex container-fluid justify-content-center">
-                        <div class=" d-flex  border border-5 border-primary p-4 ">
-                           <div class="container d-flex text-white flex-fill flex-column">
-                            <p id="todays-city"></p>
-                            
-                            <p id="todays-day"></p>
-                            <p id="todays-date"></p>
-                            <img id="todays-icon" class="icon-class" src="" alt="">
-                            <!-- <img id="todays-icon" class="icon-class" src="http://openweathermap.org/img/w/02n.png" alt="icon displaying the weather"> -->
-                            <p id="todays-temp">Search A City</p>
-                            <p id="todays-wind">To Get Your Forecast</p>
-                            <p id="todays-humid"></p>
-                          </div>
-                        </div>  
-                    </section>
+        <section id="today-forecast" class="d-flex container-fluid justify-content-center">
+            <div class=" d-flex  border border-5 border-primary p-4 ">
+                <div class="container d-flex text-white flex-fill flex-column">
+                    <p id="todays-city"></p>
+                    <p id="todays-day"></p>
+                    <p id="todays-date"></p>
+                    <img id="todays-icon" class="icon-class" src="" alt="">
+                    <!-- <img id="todays-icon" class="icon-class" src="http://openweathermap.org/img/w/02n.png" alt="icon displaying the weather"> -->
+                    <p id="todays-temp">Search A City</p>
+                    <p id="todays-wind">To Get Your Forecast</p>
+                    <p id="todays-humid"></p>
+                </div>
+            </div>  
+        </section>
 
-                        <div class="container">
-                            <div class="border-bottom border-primary border-5">
-                                <aside>
-                                    <h2 class="text-warning fw-bold">5 Day Forecast</h2>
-                                </aside>
-                            </div>
-                        </div>
+        <div class="container">
+            <div class="border-bottom border-primary border-5">
+                    <aside>
+                        <h2 class="text-warning fw-bold">5 Day Forecast</h2>
+                    </aside>
+            </div>
+        </div>
 
 
 
                 <!-- Section for 5-day forcast -->
-                    <section id="5day-forecast" class="d-flex text-white justify-content-center align-content-center mt-3 five-day-container">
+      <section id="5day-forecast" class="d-flex text-white justify-content-center align-content-center mt-3 five-day-container">
                         <!-- These will store data for each future day in the 5-day forecast -->
-                            <div id="day-2" class="five-cast future-forecast border border-5 border-warning bg-primary">
-                                
+        <div id="day-2" class="five-cast future-forecast border border-5 border-warning bg-primary">
+                <!-- Day2 Forecast -->
+            <p id="day2-city"></p>
+            <img id="day2-icon" class="icon-class" src="" alt="">
+            <p id="day2-day"></p>
+            <p id="day2-date"></p>
+            <p id="day2-temp"></p>
+             <p id="day2-wind">Day 2</p>
+            <p id="day2-humid"></p>
+        </div>
 
-                                <div class="">
-                                    <p id="day2-city"></p>
-                                    <img id="day2-icon" class="icon-class" src="" alt="">
-                                    <p id="day2-day"></p>
-                                    <p id="day2-date"></p>
-                                    <p id="day2-temp"></p>
-                                    <p id="day2-wind">Day 2</p>
-                                    <p id="day2-humid"></p>
-                                </div>
-                            </div>
+        <div id="day-3" class="five-cast future-forecast border border-5 border-warning bg-primary">
+                <!-- Day3 Forecast -->
+            <p id="day3-city"></p>
+            <img id="day3-icon" class="icon-class" src="" alt="">
+            <p id="day3-day"></p>
+            <p id="day3-date"></p>
+            <p id="day3-temp"></p>
+            <p id="day3-wind">Day 3</p>
+            <p id="day3-humid"></p>
+        </div>
 
-                            <div id="day-3" class="five-cast future-forecast border border-5 border-warning bg-primary">
-
-                                <div class="">
-                                    <p id="day3-city"></p>
-                                    <img id="day3-icon" class="icon-class" src="" alt="">
-                                    <p id="day3-day"></p>
-                                    <p id="day3-date"></p>
-                                    <p id="day3-temp"></p>
-                                    <p id="day3-wind">Day 3</p>
-                                    <p id="day3-humid"></p>
-                                </div>
-                            </div>
-
-                            <div id="day-4" class="five-cast d-flex future-forecast border border-5 border-warning bg-primary">
-                                
-
-                                <div class="">
-                                    <p id="day4-city"></p>
-                                    <img id="day4-icon" class="icon-class" src="" alt="">
-                                    <p id="day4-day"></p>
-                                    <p id="day4-date"></p>
-                                    <p id="day4-temp"></p>
-                                    <p id="day4-wind">Day 4</p>
-                                    <p id="day4-humid"></p>
-                                </div>
-                            </div>
+        <div id="day-4" class="five-cast future-forecast border border-5 border-warning bg-primary">
+            <!-- Day4 Forecast -->                
+            <p id="day4-city"></p>
+            <img id="day4-icon" class="icon-class" src="" alt="">
+            <p id="day4-day"></p>
+            <p id="day4-date"></p>
+            <p id="day4-temp"></p>
+            <p id="day4-wind">Day 4</p>
+            <p id="day4-humid"></p>  
+        </div>
                                 
                             <div id="day-5" class="five-cast d-flex future-forecast border border-5 border-warning bg-primary">
                                 
@@ -183,9 +174,9 @@
                                     <p id="day6-wind">Day 6</p>
                                     <p id="day6-humid"></p>
                                 </div>
-                            </div>
+            </div>
 
-                    </section>
+      </section>
 
     </div>  
 
