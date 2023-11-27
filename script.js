@@ -188,8 +188,6 @@ function getForecastCall(lat, lon) {
                 var dateNode6 = data.list[39].dt_txt;
                 console.log(dateNode6);
                 
-                // document.getElementById('search-city').textContent = forecastCity;
-                
                 document.getElementById('day6-city').textContent = cityNode;
                 document.getElementById('day6-day').textContent = dayjs(dateNode6).format('dddd');
                 document.getElementById('day6-date').textContent = dayjs(dateNode6).format('M/D/YYYY');
