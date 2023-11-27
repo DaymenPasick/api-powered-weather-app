@@ -37,34 +37,33 @@
         </div>     
 
     <div class="bg-danger container-fluid">   
-        <div>
+        <div class="bg-success d-flex vh-100">
                     <!-- Section for search bar and search history buttons -->
                     
-                <nav class="">
+                <nav class="bg-primary col-sm-3 col-md-6 col-lg-3">
+                   <div class="d-flex flex-column"> 
 
-                    <div class="">
+                    <div class="d-flex bg-warning justify-content-center">
                         <h2 class="text-light">Search For City</h2>
                     </div>
 
-                    <div class="">
+                    <div class="d-flex bg-danger">
                         <form id="search-bar" class="">
                             <label for="City"></label>
-                            
                             <button id="search-button" class="btn-primary">&#x1F50E</button>
                             <input type="text" id="city-input" class="border-warning">
                         </form>
                     </div> 
                     
-                    <div class="d-flex justify-content-center">
+                    <div class="bg-warning">
                         <button id="history-refresh" onclick="window.location.reload()" class="text-light">View Latest Search History</button>
                     </div>
 
-                    <div id="search-history" class="">
+                    <div id="search-history" class="bg-danger">
                     
                     </div>
                     <!-- will append button elements as children here -->
-                    <!-- button elements will populate based off city search history -->
-
+                  </div>  <!-- button elements will populate based off city search history -->
                 </nav>
 
 
