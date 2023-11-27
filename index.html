@@ -25,8 +25,6 @@
 
 <body class="bg-dark">
 
-    
-    
             <!-- needs div for container -->
         <div class="bg-body-tertiary border-bottom border-5 border-warning">
             <header id="header" class="d-flex container-fluid justify-content-end">
@@ -36,35 +34,40 @@
             </header>
         </div>     
 
-    <div class="bg-danger container-fluid">   
+    <div class="bg-danger container-fluid d-flex">
+      <div class="bg-white container-fluid">
+        
+        <nav class="bg-primary col-lg-3 vh-100">
+            <div class="d-flex flex-column "> 
+
+             <div class="d-flex bg-warning justify-content-center">
+                 <h2 class="text-light">Search For City</h2>
+             </div>
+
+             <div class="d-flex bg-danger">
+                 <form id="search-bar" class="">
+                     <label for="City"></label>
+                     <button id="search-button" class="btn-primary">&#x1F50E</button>
+                     <input type="text" id="city-input" class="border-warning">
+                 </form>
+             </div> 
+             
+             <div class="bg-warning">
+                 <button id="history-refresh" onclick="window.location.reload()" class="text-light">View Latest Search History</button>
+             </div>
+
+             <div id="search-history" class="bg-danger">
+             
+             </div>
+             <!-- will append button elements as children here -->
+           </div>  <!-- button elements will populate based off city search history -->
+        </nav>
+     </div>
+
         <div class="bg-success d-flex vh-100">
                     <!-- Section for search bar and search history buttons -->
                     
-                <nav class="bg-primary col-sm-3 col-md-6 col-lg-3">
-                   <div class="d-flex flex-column"> 
-
-                    <div class="d-flex bg-warning justify-content-center">
-                        <h2 class="text-light">Search For City</h2>
-                    </div>
-
-                    <div class="d-flex bg-danger">
-                        <form id="search-bar" class="">
-                            <label for="City"></label>
-                            <button id="search-button" class="btn-primary">&#x1F50E</button>
-                            <input type="text" id="city-input" class="border-warning">
-                        </form>
-                    </div> 
-                    
-                    <div class="bg-warning">
-                        <button id="history-refresh" onclick="window.location.reload()" class="text-light">View Latest Search History</button>
-                    </div>
-
-                    <div id="search-history" class="bg-danger">
-                    
-                    </div>
-                    <!-- will append button elements as children here -->
-                  </div>  <!-- button elements will populate based off city search history -->
-                </nav>
+               
 
 
             <div class="">
