@@ -218,7 +218,7 @@ function takeFormInput(event){
 
 //will handle calls to openweather geoAPI and get lat and long
 function getCityGeo(){
-    var geoApiCall = "http://api.openweathermap.org/geo/1.0/direct?q="+cityInput+"&limit=1&appid=" + weatherApiKey;
+    var geoApiCall = "https://api.openweathermap.org/geo/1.0/direct?q="+cityInput+"&limit=1&appid=" + weatherApiKey;
     fetch(geoApiCall)
     .then(function (response) {
         return response.json();
@@ -327,7 +327,7 @@ function buttonHistorySearch() {
     historyButtonCity = this.textContent
     console.log(historyButtonCity)
 
-    var geoApiCall = "http://api.openweathermap.org/geo/1.0/direct?q="+historyButtonCity+"&limit=1&appid=" + weatherApiKey;
+    var geoApiCall = "https://api.openweathermap.org/geo/1.0/direct?q="+historyButtonCity+"&limit=1&appid=" + weatherApiKey;
     fetch(geoApiCall)
     .then(function (response) {
         return response.json();
