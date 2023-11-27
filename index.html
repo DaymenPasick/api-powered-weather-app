@@ -23,12 +23,12 @@
 
 
 
-<body class="bg-black d-flex flex-column">
+<body class="bg-dark">
 
     
     
             <!-- needs div for container -->
-        <div class="bg-body-tertiary bg-primary border-bottom border-5 border-warning">
+        <div class="bg-body-tertiary border-bottom border-5 border-warning">
             <header id="header" class="d-flex container-fluid justify-content-end">
             
                 <h1 class="text-light me-5 py-2">Weather Dashboard</h1>
@@ -36,22 +36,22 @@
             </header>
         </div>     
 
-    <div class="container-fluid d-flex vh-100">   
-
+    <div class="bg-danger container-fluid">   
+        <div>
                     <!-- Section for search bar and search history buttons -->
                     
-                <nav class="d-flex flex-column col-sm-5 col-md-3 col-lg-3 justify-content-evenly">
+                <nav class="">
 
-                    <div class="d-flex justify-content-center mt-3">
+                    <div class="">
                         <h2 class="text-light">Search For City</h2>
                     </div>
 
                     <div class="">
-                        <form id="search-bar" class="d-flex justify-content-center mt-3 mb-5 mx-2">
+                        <form id="search-bar" class="">
                             <label for="City"></label>
                             
                             <button id="search-button" class="btn-primary">&#x1F50E</button>
-                            <input type="text" id="city-input" class="border-warning ms-2">
+                            <input type="text" id="city-input" class="border-warning">
                         </form>
                     </div> 
                     
@@ -59,9 +59,7 @@
                         <button id="history-refresh" onclick="window.location.reload()" class="text-light">View Latest Search History</button>
                     </div>
 
-                    <div id="search-history" class="history-button-container 
-                    border-top border-warning d-flex 
-                    justify-content-between pt-5 flex-column-reverse">
+                    <div id="search-history" class="">
                     
                     </div>
                     <!-- will append button elements as children here -->
@@ -70,14 +68,14 @@
                 </nav>
 
 
-            <div class="d-flex container-fluid col-md-9 col-lg-6">
-                <main class="d-flex flex-column justify-content-evenly">
+            <div class="">
+                <main class="">
 
                    
 
                 <!-- Section for today's forcasted weather -->
-                    <section id="today-forecast" class="container-fluid d-flex justify-content-center">
-                        <div class="d-flex flex-column border border-5 border-primary text-center bg-light justify-content-center">
+                    <section id="today-forecast" class="">
+                        <div class=" border border-5 border-primary bg-light ">
                             <p id="todays-city"></p>
                             
                             <p id="todays-day"></p>
@@ -93,12 +91,12 @@
 
 
                 <!-- Section for 5-day forcast -->
-                    <section id="5day-forecast" class="container-fluid d-flex five-day-container">
+                    <section id="5day-forecast" class="five-day-container">
                         <!-- These will store data for each future day in the 5-day forecast -->
                             <div id="day-2" class="five-cast d-flex future-forecast border border-5 border-primary bg-light">
                                 
 
-                                <div class="d-flex flex-column justify-content-center">
+                                <div class="">
                                     <p id="day2-city"></p>
                                     <img id="day2-icon" class="icon-class" src="" alt="">
                                     <p id="day2-day"></p>
@@ -109,9 +107,9 @@
                                 </div>
                             </div>
 
-                            <div id="day-3" class="five-cast d-flex future-forecast border border-5 border-primary bg-light">
+                            <div id="day-3" class="five-cast future-forecast border border-5 border-primary bg-light">
 
-                                <div class="d-flex flex-column justify-content-center ">
+                                <div class="">
                                     <p id="day3-city"></p>
                                     <img id="day3-icon" class="icon-class" src="" alt="">
                                     <p id="day3-day"></p>
@@ -125,7 +123,7 @@
                             <div id="day-4" class="five-cast d-flex future-forecast border border-5 border-primary bg-light ">
                                 
 
-                                <div class="d-flex flex-column justify-content-center ">
+                                <div class="">
                                     <p id="day4-city"></p>
                                     <img id="day4-icon" class="icon-class" src="" alt="">
                                     <p id="day4-day"></p>
@@ -139,7 +137,7 @@
                             <div id="day-5" class="five-cast d-flex future-forecast border border-5 border-primary bg-light ">
                                 
 
-                                <div class="d-flex flex-column justify-content-center ">
+                                <div class="">
                                     <p id="day5-city"></p>
                                     <img id="day5-icon" class="icon-class" src="" alt="">
                                     <p id="day5-day"></p>
@@ -150,10 +148,10 @@
                                 </div>
                             </div>
 
-                            <div id="day-6" class="five-cast d-flex future-forecast border border-5 border-primary bg-light ">
+                            <div id="day-6" class="five-cast future-forecast border border-5 border-primary bg-light ">
                                
 
-                                <div class="d-flex mx-2 flex-column justify-content-center ">
+                                <div class="">
                                     <p id="day6-city"></p>
                                     <img id="day6-icon" class="icon-class" src="" alt="">
                                     <p id="day6-day"></p>
@@ -170,11 +168,10 @@
 
 
 
-
-            
-
             </main>
 
+
+        </div>
     </div>        
 
 
