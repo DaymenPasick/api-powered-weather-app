@@ -7,12 +7,12 @@
 
 ## Screenshots
 
-- Image of event planner
+- Image Of Inactive App
 
-![completed product website screenshot](./assets/imgs/Work-Day-Scheduler-empty.png)
+![completed product website screenshot](./assets/imgs/WeatherAppInactive.png)
 
 
- - Image of event planner with a few events saved
+ - Image Of App With Forecasts
 
 ![completed product website screenshot](./assets/imgs/Work-Day-Scheduler-events.png)
 
