@@ -23,10 +23,10 @@
 
 
 
-<body class="bg-dark">
+<body class="bg-black">
 
             <!-- needs div for container -->
-        <div class="bg-body-tertiary border-bottom border-5 border-warning">
+        <div class="border-bottom border-5 border-warning">
             <header id="header" class="d-flex container-fluid justify-content-end">
             
                 <h1 class="text-light me-5 py-2">Weather Dashboard</h1>
@@ -34,10 +34,10 @@
             </header>
         </div>     
 
-    <div id="nav-div" class="bg-danger container-fluid d-flex">
-      <div class="bg-white container-fluid  col-sm-3 col-md-3 col-lg-3">
+    <div id="nav-div" class="container-fluid d-flex">
+      <div class="container-fluid  col-sm-3 col-md-3 col-lg-3">
         
-        <nav class="bg-primary vh-100">
+        <nav class="vh-100">
             <div class="d-flex flex-column "> 
 
              <div class="d-flex justify-content-center">
@@ -64,7 +64,7 @@
         </nav>
      </div>
 
-        <div id="main-div" class="bg-success container d-flex flex-column justify-content-evenly col-sm-9 col-md-9 col-lg-9">
+        <div id="main-div" class=" border border-5 border-success container d-flex flex-column justify-content-evenly col-sm-9 col-md-9 col-lg-9">
                     <!-- Section for search bar and search history buttons -->
                     
             <div class="">
@@ -73,8 +73,9 @@
                    
 
                 <!-- Section for today's forcasted weather -->
-                    <section id="today-forecast" class="d-flex bg-dark container-fluid justify-content-center">
-                        <div class=" border border-5 border-primary bg-light ">
+                    <section id="today-forecast" class="d-flex container-fluid justify-content-center">
+                        <div class=" d-flex  border border-5 border-primary bg-light ">
+                           <div class="container d-flex flex-fill flex-column">
                             <p id="todays-city"></p>
                             
                             <p id="todays-day"></p>
@@ -84,13 +85,23 @@
                             <p id="todays-temp">Search A City</p>
                             <p id="todays-wind">To Get Your Forecast</p>
                             <p id="todays-humid"></p>
+                          </div>
                         </div>  
                     </section>
 
         </div>            
+                        <div class="container border border-danger">
+                            <div class="border-top border-bottom border-warning border-5">
+                                <aside>
+                                    <h2 class="text-warning fw-bold">5 Day Forecast</h2>
+                                </aside>
+                            </div>
+                        </div>
+
+
 
                 <!-- Section for 5-day forcast -->
-                    <section id="5day-forecast" class="d-flex bg-white justify-content-center align-content-center five-day-container">
+                    <section id="5day-forecast" class="d-flex  justify-content-center align-content-center five-day-container">
                         <!-- These will store data for each future day in the 5-day forecast -->
                             <div id="day-2" class="five-cast future-forecast border border-5 border-primary bg-light">
                                 
