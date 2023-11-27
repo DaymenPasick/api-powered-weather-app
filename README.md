@@ -19,7 +19,7 @@
 ## Usage
 
 Here is the link to the live weather app: 
-https://daymenpasick.github.io/student-workday-scheduler/
+https://daymenpasick.github.io/api-powered-weather-app/
 
 
 ## License
