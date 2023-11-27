@@ -24,24 +24,23 @@ header h1{
 
 
 /* === nav/search section start ==================================== */
-nav h2 {
-    font-weight: bold;
+nav div h2 {
+    font-weight: 900;
 }
-
 
 #history-refresh {
     background-color: rgb(54, 54, 178);
     padding: 2px 10px;
-    font-weight: bold;
+    font-weight: 900;
 }
 
-/* sear history */
+/* search history */
 .history-button {
     color:var(--button-txt);
     background-color: var(--button-color);
     border: solid 5px var(--theme-color);
     margin:30px 0px;
-    font-weight: bold;
+    font-weight: 900;
 
 }
 
@@ -51,15 +50,26 @@ nav h2 {
 
 /* === Styling for forecast blocks start ========================== */
 
-main p {
-    font-weight: bold;
+main {
+    font-weight: 900;
     font-size: 15px;
+}
+
+main h2 {
+    font-weight: 900;
 }
 
 
 .five-cast {
     margin: 0 10px;
-    padding: 10px;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.five-cast p {
+    display: flex;
+    justify-content: center;
 }
 
 /* === Styling for forecast blocks end ========================== */
