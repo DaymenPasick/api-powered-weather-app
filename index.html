@@ -37,7 +37,7 @@
     <div id="nav-div" class="bg-danger container-fluid d-flex">
       <div class="bg-white container-fluid  col-sm-3 col-md-3 col-lg-3">
         
-        <nav class="bg-primary col-lg-3 vh-100">
+        <nav class="bg-primary vh-100">
             <div class="d-flex flex-column "> 
 
              <div class="d-flex justify-content-center">
@@ -52,7 +52,7 @@
                  </form>
              </div> 
              
-             <div class="bg-warning">
+             <div class="">
                  <button id="history-refresh" onclick="window.location.reload()" class="text-light">View Latest Search History</button>
              </div>
 
@@ -64,7 +64,7 @@
         </nav>
      </div>
 
-        <div id="main-div" class="bg-success container-fluid  col-sm-9 col-md-9 col-lg-9">
+        <div id="main-div" class="bg-success container d-flex flex-column justify-content-evenly col-sm-9 col-md-9 col-lg-9">
                     <!-- Section for search bar and search history buttons -->
                     
             <div class="">
@@ -73,7 +73,7 @@
                    
 
                 <!-- Section for today's forcasted weather -->
-                    <section id="today-forecast" class="">
+                    <section id="today-forecast" class="d-flex bg-dark container-fluid justify-content-center">
                         <div class=" border border-5 border-primary bg-light ">
                             <p id="todays-city"></p>
                             
@@ -87,12 +87,12 @@
                         </div>  
                     </section>
 
-
+        </div>            
 
                 <!-- Section for 5-day forcast -->
-                    <section id="5day-forecast" class="five-day-container">
+                    <section id="5day-forecast" class="d-flex bg-white justify-content-center align-content-center five-day-container">
                         <!-- These will store data for each future day in the 5-day forecast -->
-                            <div id="day-2" class="five-cast d-flex future-forecast border border-5 border-primary bg-light">
+                            <div id="day-2" class="five-cast future-forecast border border-5 border-primary bg-light">
                                 
 
                                 <div class="">
@@ -170,7 +170,7 @@
             </main>
 
 
-        </div>
+        
     </div>        
 
 
