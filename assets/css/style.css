@@ -59,12 +59,26 @@ main h2 {
     font-weight: 900;
 }
 
+.today-container p{
+    display: flex;
+    justify-content: center;
+    font-size: 25px;
+}
+
+#todays-city{
+font-size: 45px;
+font-weight: 900;
+}
+
 
 .five-cast {
     margin: 0 10px;
     padding-top: 20px;
     display: flex;
     flex-direction: column;
+    padding-left: 10px;
+    padding-right: 10px;
+    
 }
 
 .five-cast p {
